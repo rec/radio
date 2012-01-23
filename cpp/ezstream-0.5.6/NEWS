@@ -1,0 +1,310 @@
+Changes in 0.5.6, released on 2009-08-31:
+
+ * ezstream-file.sh:
+   - [NEW]   Add and install ezstream-file.sh, a new convenience shell script
+             that generates configuration and playlist from a template and
+             command line, respectively. (Bourne shell and POSIX utilities
+             required.)
+             See ezstream-file.sh(1) for details.
+ * src/ezstream.c:
+   - [MISC]  Be more tolerant towards faulty playlists and similar issues.
+             Failure to open a resource (e.g. a media file) is no longer fatal
+             and operation will continue until 100 subsequent errors. Based on
+             an idea from dhorton.
+             (Ticket #1585)
+   - [NEW]   New command line option -s: Make ezstream function as a line-
+             based shuffling utility.
+ * src/playlist.c:
+   - [MISC]  Consider no output from a playlist program to be equivalent to an
+             empty line, indicating that the end of the playlist is reached.
+   - [FIX]   Do not complain when receiving an empty line from a playlist
+             program.
+ * examples/:
+   - [NEW]   Add a real-world example playlist script with logging feature.
+
+
+Changes in 0.5.5, released on 2009-08-01:
+
+ * win32/config.h:
+   - [FIX]   Re-enable TagLib support in MSVC build. Found by Roman Donchenko.
+             (Ticket #1535)
+
+ * various:
+   - [NEW]   New optional <sourceuser/> configuration option, to change the
+             username used in authentication with Icecast. Suggested by
+             Akos Veres.
+   - [MISC]  Further improvements and minor fixes in the build system.
+
+
+
+Changes in 0.5.4, released on 2009-03-28:
+
+ * compat/sys/tree.*:
+   - [MISC]  Update the tree macros to a newer version. The manual, shipped for
+             reference, now has a more friendly 2-clause BSD license.
+
+ * various:
+   - [FIX]   Add a missing metadata charset conversion, and add charset
+             conversions for filenames. From Roman Donchenko.
+   - [FIX]   Fix build on MinGW. From Roman Donchenko.
+   - [MISC]  Overhaul and modernize the build system. Ezstream is now expected
+             to build "out of the box" on more systems without configuration
+             tweaks.
+   - [FIX]   Adjust the build system to better handle optional dependencies.
+             It is now possible to choose between TagLib and libvorbis for
+             reading Ogg Vorbis metadata, or no Vorbis metadata support at
+             all. (Ticket #1398)
+   - [MISC]  Miscellaneous code maintenance and a bit of cleaning up.
+
+
+
+Changes in 0.5.3, released on 2007-12-01:
+
+ * src/ezstream.c:
+   - [FIX]   Prevent (very) long-running ezstream processes from dying without
+             error message by ignoring SIGPIPE where available.
+
+
+
+Changes in 0.5.2, released on 2007-11-04:
+
+ * src/ezstream.c:
+   - [FIX]   Fix a crash that occurs when streaming from standard input without
+             using a script or program that supplies metadata information.
+             (Ticket #1247)
+   - [FIX]   Similar to the fix for #1247, properly initialize another
+             variable. The result is a cosmetic fix for the "real-time" status
+             line when streaming from standard input.
+   - [MISC]  Provide a useful error message when there's no more data to read
+             from standard input instead of talking about scary, bad file
+             descriptors.
+   - [MISC]  Further prettify the output to make more sense when streaming from
+             standard input.
+
+ * src/xalloc.c:
+   - [FIX]   A rare, possible crash has been fixed in an error path.
+
+ * examples/*:
+   - [NEW]   Add an example configuration for streaming from standard input.
+   - [MISC]  Improve reencoding examples to make them more easily usable with
+             fewer changes.
+   - [MISC]  Reenconding example files have been renamed.
+
+
+
+Changes in 0.5.1, released on 2007-09-16:
+
+ * src/playlist.c:
+   - [FIX]   Fix a segmentation fault in playlist_*_next() when trying to
+             access empty playlists. (Ticket #1240)
+
+ * src/ezstream.c:
+   - [MISC]  Issue a warning in verbose mode when dealing with an empty
+             playlist file. This also makes it more obvious what is going on
+             when a user makes ezstream spin on an empty playlist with
+             <stream_once/> set to 0.
+
+
+
+Changes in 0.5.0, released on 2007-08-31:
+
+ * src/ezstream.c:
+   - [FIX]   The special case of streaming MP3 files without reencoding had
+             been lost, causing such streams to have no metadata. This has
+             been fixed. (Ticket #1225)
+   - [MISC]  Handle SIGINT and SIGTERM to perform a clean shutdown.
+
+ * various:
+   - [NEW]   A new convenience feature has been added, to allow automatic
+             normalization of metadata strings. Useful if the majority of
+             files come from a broken encoder/tagging program. Disabled
+             by default, this feature can be enabled with the new `-n'
+             command line parameter.
+   - [NEW]   Enable Unicode support in TagLib and convert metadata strings
+             to the current locale (LC_CTYPE) before displaying them on the
+             console. Unsupported characters are displayed as '?', which
+             does not affect the actual metadata. This feature requires
+             iconv() via libc, if available, or GNU libiconv.
+   - [NEW]   Support gettimeofday() functionality on all platforms, including
+             Windows. The "real-time status line" when using the -q and -v
+             parameters is now complete everywhere.
+   - [MISC]  Add new --enable-debug configuration option to the configure
+             script, which enables (also new) memory debugging features.
+             (Not interesting for non-developers.)
+   - [MISC]  Various small code cleanups.
+
+ * The Windows build of ezstream now supports reading metadata from files
+   with TagLib.
+
+
+
+Changes in 0.4.3, released on 2007-07-24:
+
+ * src/ezstream.c:
+   - [FIX]   Plug the file descriptor leak, partially fixed in version 0.4.1,
+             for good - it affected more than just the -q use case.
+
+
+
+Changes in 0.4.2, released on 2007-07-17:
+
+ * src/ezstream.c:
+   - [FIX]   Make <stream_once/> work with playlists, too. Problem found by
+             Geoff Shang <geoff at quitelikely dot com>.
+
+
+
+Changes in 0.4.1, released on 2007-07-15:
+
+ * src/ezstream.c:
+   - [FIX]   Plug a file descriptor leak when using the -q parameter.
+
+ * Documentation:
+   - [FIX]   Minor spelling/consistency fixes.
+
+
+
+Changes in 0.4.0, released on 2007-03-11:
+
+ * src/util.*:
+   - [FIX]   The xfree() function did not work as intended due to a programming
+             error. Found, and fix suggested, by Karl Heyes.
+
+ * src/playlist.*:
+   - [FIX]   An error compareable to the one about xfree() in src/util.* has
+             been fixed.
+   - [MISC]  Refuse to execute a group- or world-writeable playlist script or
+             program.
+
+ * src/compat.c:
+   - [ADD]   Implement a basename() function for Windows that behaves like the
+             ones used on Unix systems.
+
+ * win32/:
+   - [MISC]  Remove the rather ugly HTML version of the man page from the
+             distribution, and provide a much better PDF version instead.
+
+ * various:
+   - [ADD]   Allow ezstream to use TagLib for reading metadata from media
+             files. TagLib (libtag_c) is now an optional dependency.
+   - [ADD]   When built with TagLib support, include the song length in the
+             "real-time" information line, if available.
+   - [ADD]   New <metadata_progname> configuration option, which causes
+             metadata to be read from the output of an external program or
+             script.
+   - [ADD]   New runtime control via the SIGUSR2 signal, which triggers reading
+             of fresh metadata information from <metadata_progname> (metadata
+             is always read at song changes.)
+   - [ADD]   New <metadata_format> configuration option, to customize metadata
+             strings when used with the new <metadata_progname> feature.
+   - [ADD]   New '@a@' and '@t@' placeholders for separate artist and title
+             metadata in de-/encoder commands.
+
+
+
+Changes in 0.3.0, released on 2007-03-05:
+
+ * The original author, Ed Zaleski, hands over ezstream maintainership to
+   Moritz Grimm.
+
+ * New features:
+   - Playlist shuffling support, enabled via the new <shuffle> configuration
+     option.
+   - Playlist scripting support: Indicate that the executable in <filename>
+     should be run each time to get a new media filename to stream, by setting
+     the new <playlist_program> configuration option to 1.
+   - New <stream_once> configuration option, which makes ezstream play a media
+     file or playlist once and then exit.
+   - New <reconnect_tries> option to restrict the number of reconnection
+     attempts to a server in case the connection goes down.
+   - Add feature to skip the currently streaming track, done by sending the
+     SIGUSR1 signal to the ezstream process.
+   - New command line option `-q': Suppress standard error output from external
+     de-/encoders.
+   - New command line option `-v': Produce more verbose output.
+   - New "real-time" status display of the stream when both -q and -v are given
+     on the command line.
+   - Thorough configuration file checks with helpful error messages.
+   - The @M@ metadata placeholder is now supported in <decode>.
+   - Playlists may now have the '.txt' filename extension in addition to
+     '.m3u'.
+
+ * Fixes:
+   - At least one stack and one heap overflow have been fixed.
+   - Several memory leaks have been fixed.
+   - Strict checking of the configuration file prevents unexpected behavior and
+     adds another safeguard to prevent crashes.
+   - Fixed and more portable signal handling.
+
+ * Miscellaneous, user-visible changes:
+   - Improved documentation. Ezstream now has a comprehensive man page and the
+     README file has been rewritten.
+   - Consistency improvements in the configuration examples. The examples are
+     now also installed.
+   - The <format/> and <match/> configuration elements, as well as filename
+     extension matching to detect playlists in the <filename> element, are
+     now case insensitive.
+   - Various improvements in the build system and portability fixes.
+   - Consistent and more helpful messages from ezstream. By default, ezstream
+     no longer clutters the screen with lots of output (some information that
+     used to be available needs to be enabled with the new `-v' command line
+     parameter.)
+   - Tweaked metadata string generation: no more lone " - " dashes at the
+     beginning or end of the string.
+   - New command line option `-V': Print the version number and exit.
+
+
+
+Changes in 0.2.1, released on 2005-12-14:
+
+ * src/ezstream.c:
+   - [FIX]   Prevent a heap overflow with large ID3v1 tags.
+   - [FIX]   Use pclose() on FILE* handles that were opened with popen().
+
+
+
+Changes in 0.2.0, released on 2005-01-05:
+
+ * various:
+   - [MISC]  Clean up and improve example configuration files, and add more
+             examples.
+
+ * src/ezstream.c:
+   - [FIX]   Fix reencoding support on Windows.
+   - [ADD]   Attempt to reconnect to a server if the connection goes down
+             during streaming.
+
+
+
+Changes in 0.1.3, released on 2004-12-22:
+
+ * various:
+   - [ADD]   Add support for streaming Ogg Theora.
+   - [ADD]   Add reencoding support via external de-/encoders.
+   - [ADD]   Support passing through unknown media types.
+
+
+
+Changes in 0.1.2, released on 2004-04-21:
+
+ * src/ezstream.c:
+   - [ADD]   Add feature to reread the playlist after the currently streaming
+             track, done by sending the SIGHUP signal to the ezstream process.
+
+
+
+Changes is 0.1.1, released on 2004-02-02:
+
+ * src/ezstream.c:
+   - [FIX]   Set read mode to binary for stdin on WIN32.
+
+ * win32/ezstream.dsp:
+   - [MISC]  Add libxml to project file.
+
+
+
+2004-01-30:
+
+ * Initial import of ezstream 0.1.0 into Xiph.org SVN.
+
+ * Ezstream 0.1.0 released.

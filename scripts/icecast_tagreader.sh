@@ -1,0 +1,1 @@
+/usr/bin/icecast_tagreader $@
