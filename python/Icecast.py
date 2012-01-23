@@ -6,75 +6,52 @@ import time
 import twitter
 
 import ClientInfo
+import Config
+import File
 import Scroller
 import Secret
 import SongRecord
 
-API = twitter.Api(*Secret.secret())
-
-FILL = ' [...] '
-URL = 'http://localhost:8000/data.xsl'
-
-ROOT = '/home/radio/public_html/staging/generated/'
-
-TITLE_FILE = ROOT + 'title.txt'
-JSON_FILE = ROOT + 'json.html'
-SCROLLER_FILE = ROOT + 'scroller.html'
-USER_FILE = ROOT + 'users.html'
-
-INTERVAL = 1
-CLIENT_INTERVAL = 15
-
-def replaceAtomic(filename, value):
-  tmpname = filename + '.tmp'
-  f = open(tmpname, 'w')
-  f.write(value)
-  f.close()
-  os.rename(tmpname, filename)
-
-def readFile(f):
-  try:
-    return open(f).read()
-  except:
-    return None
+API = twitter.Api(
+  consumer_key = Secret.consumer_key,
+  consumer_secret = Secret.consumer_secret,
+  access_token_key = Secret.access_token_key,
+  access_token_secret = Secret.access_token_secret)
 
 def onNewSong(song, title):
-  replaceAtomic(TITLE_FILE, title)
-  try:
-    scroller = Scroller.scroll(readFile(SCROLLER_FILE), title)
-    replaceAtomic(SCROLLER_FILE, scroller)
-  except:
-    # print e
-    pass
+  File.replaceAtomic(TITLE_FILE, title)
 
-  try:
-    j = json.dumps(SongRecord.getJson(song, scroller=scroller))
-    replaceAtomic(JSON_FILE, j)
-  except:
-    # print e
-    pass
-  # api.PostUpdate(title)
+  scroller = Scroller.scroll(readFile(SCROLLER_FILE), title)
+  if scroller:
+    File.replaceAtomic(SCROLLER_FILE, scroller)
+    song = SongRecord.getJson(song, scroller=scroller)
+    if song:
+      File.replaceAtomic(JSON_FILE, json.dumps(song))
 
-def run(api, previousTitle):
-  i = 0
+  if POST_TO_TWITTER:
+    API.PostUpdate(title)
+
+def getSong(previousTitle):
+  song = SongRecord.getSongRecord(URL)
+  title = song.get('title', '')
+  if title and title != previousTitle:
+    previousTitle = title
+    onNewSong(song, title)
+
+  return title
+
+def run(previousTitle):
+  t = 0
   while True:
-    song = SongRecord.getSongRecord(URL)
-    title = song.get('title', '')
-    if title and title != previousTitle:
-      previousTitle = title
-      onNewSong(song, title)
-    if not i:
-      try:
-        replaceAtomic(USER_FILE, json.dumps(list(ClientInfo.getClientInfo())))
-      except:
-        # print e
-        # pass
-        raise
-    i += 1
-    if i >= CLIENT_INTERVAL:
-      i = 0
+    clocks = t % INTERVAL, t % CLIENT_INTERVAL
+    if not clocks[0]:
+      previousTitle = getSong(previousTitle)
+    if not clocks[1]:
+      ClientInfo.getClients()
 
-    time.sleep(INTERVAL)
+    delta = min(INTERVAL - clocks[0], CLIENT_INTERVAL - clocks[1])
+    time.sleep(delta)
+    t += delta
 
-run(API, readFile(TITLE_FILE))
+run(readFile(TITLE_FILE))
 

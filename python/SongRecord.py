@@ -6,6 +6,8 @@ import xml.dom.minidom
 
 import FixText
 
+TITLE_FILE = ROOT + 'title.txt'
+
 JSON_FIELDS = (('online', '1'), 
                ('title', ''), 
                ('listeners', '0'), 
@@ -14,19 +16,23 @@ JSON_FIELDS = (('online', '1'),
                ('error', ''))
 
 
-def getSongRecord(url):
+def getSongRecord():
   song = {}
 
-  dom = xml.dom.minidom.parse(urllib2.urlopen(url))
-  items = dom.getElementsByTagName('item')
-  if items:
-    for child in items[0].childNodes:
-      name = child.tagName
-      if child.childNodes:
-        text = child.childNodes[0].wholeText
-        if name == 'title':
-          text = FixText.fixSongTitle(text)
-        song[name] = text
+  try:
+    dom = xml.dom.minidom.parse(urllib2.urlopen(Config.SONG_DATA_URL))
+    items = dom.getElementsByTagName('item')
+    if items:
+      for child in items[0].childNodes:
+        name = child.tagName
+        if child.childNodes:
+          text = child.childNodes[0].wholeText
+          if name == 'title':
+            text = FixText.fixSongTitle(text)
+          song[name] = text
+  except:
+    print "Couldn't read song record for", Config.SONG_DATA_URL)
+
   return song
 
 

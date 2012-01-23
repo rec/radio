@@ -1,16 +1,16 @@
 import urllib2
 import BeautifulSoup
 
-URL = 'http://ax.to:8000/admin/listclients.xsl?mount=/swirlymount'
+import Config
+import File
 
 def makeOpener():
   # create a password manager
   password_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm()
-
-  # Add the username and password.
-  # If we knew the realm, we could use it instead of ``None``.
-  top_level_url = "http://example.com/foo/"
-  password_mgr.add_password(None, 'http://ax.to:8000/admin/', 'admin', 'wombatwombat')
+  password_mgr.add_password(None, 
+                            Config.ADMIN_URL, 
+                            Config.ADMIN_USER,
+                            Config.ADMIN_PASSWORD)
 
   handler = urllib2.HTTPBasicAuthHandler(password_mgr)
 
@@ -26,7 +26,12 @@ def getTableLine(c):
 
 
 def getClientInfo():
-  soup = BeautifulSoup.BeautifulSoup(OPENER.open(URL).read())
+  try:
+    soup = BeautifulSoup.BeautifulSoup(OPENER.open(Config.CLIENT_URL).read())
+  except:
+    print 'No client for ', Config.CLIENT_URL
+    return
+    
   contents = soup.find(id='clientTable')
 
   first = True
@@ -36,4 +41,8 @@ def getClientInfo():
         first = False
       else:
         yield getTableLine(c)
+
+
+def getClients():
+  File.replaceAtomic(Config.CLIENT_FILE, json.dumps(list(getClientInfo())))
 
