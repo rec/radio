@@ -1,11 +1,3 @@
-<!--
-   EXAMPLE: MP3 playlist stream WITHOUT reencoding
-
-   This example streams a playlist that contains only MP3 files. No other file
-   formats may be listed. Since ezstream will not be doing any reencoding, the
-   resulting stream format (bitrate, samplerate, channels) will be of the
-   respective input files.
- -->
 <ezstream>
     <url>http://localhost:8000/swirlymount</url>
     <!--
