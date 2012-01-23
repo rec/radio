@@ -1,5 +1,5 @@
 <ezstream>
-    <url>http://localhost:8000/swirlymount</url>
+    <url>http://radio.swirly.com:8000/radio</url>
     <!--
       If a different user name than "source" should be used, set it in
       <sourceuser/>:
@@ -8,7 +8,7 @@
     <sourcepassword>wombatwombat</sourcepassword>
     <format>MP3</format>
     <!-- <metadata_format>@s@</metadata_format> -->
-    <filename>playlist.m3u</filename>
+    <filename>/home/radio/radio/ezstream/ezstream_files.txt</filename>
     <!-- Once done streaming playlist.m3u, repeat: -->
     <stream_once>0</stream_once>
     <shuffle>1</shuffle>
