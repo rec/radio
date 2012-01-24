@@ -17,7 +17,7 @@ def getListeners(data):
     except:
       pass
 
-  if len(listeners) > 1
+  if len(listeners) > 1:
     return sorted(listeners[1:], key=operator.itemgetter('time'))
   else:
     return listeners
