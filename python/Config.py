@@ -1,19 +1,22 @@
+#!/usr/bin/python
+
 FILL = ' [...] '
 ROOT_URL = 'http://ax.to:8000/'
 
-SONG_DATA_URL = ROOT_URL + 'data.xsl'
-CLIENT_URL = ROOT_URL + 'admin/listclients.xsl?mount=/radio'
+STATUS_URL = ROOT_URL + 'data.xsl'
+LISTENER_URL = ROOT_URL + 'admin/listclients.xsl?mount=/radio'
 
-ADMIN_URL = ROOT_URL + 'admin/'
-ADMIN_USER = 'admin'
-ADMIN_PASSWORD = 'wombatwombat'
-GENERATED_FILES = '/home/radio/public_html/staging/generated/'
+ADMIN = ROOT_URL + 'admin/', 'admin', 'wombatwombat'
+GENERATED_FILES = '/home/radio/radio/public_html/generated/'
 
-TITLE_FILE = GENERATED_FILES + 'title.txt'
-JSON_FILE = GENERATED_FILES + 'json.html'
-SCROLLER_FILE = GENERATED_FILES + 'scroller.html'
-CLIENT_FILE = GENERATED_FILES + 'clients.html'
+STATUS_FILE = GENERATED_FILES + 'status.html'
+LISTENER_FILE = GENERATED_FILES + 'listeners.html'
 
-SONG_INTERVAL = 1
-CLIENT_INTERVAL = 15
+STATUS_INTERVAL = 1
+LISTENER_INTERVAL = 15
 POST_TO_TWITTER = False
+LOGGING_ENABLED = True
+
+def log(msg):
+  if LOGGING_ENABLED:
+    print msg
