@@ -2,6 +2,8 @@
 
 import urllib2
 
+import Config
+
 def makeOpener():
   manager = urllib2.HTTPPasswordMgrWithDefaultRealm()
   manager.add_password(None, *Config.ADMIN)

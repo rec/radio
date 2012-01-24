@@ -9,6 +9,7 @@ import xml.dom.minidom
 import Config
 import File
 import FixText
+import Job
 import Secret
 
 JSON_FIELDS = {
@@ -33,7 +34,6 @@ def getStatusRecord(data):
       status[name] = text
 
   except Exception as e:
-    print "Couldn't read status record for", Config.STATUS_DATA_URL
     print e
 
   return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
