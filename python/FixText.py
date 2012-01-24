@@ -10,9 +10,12 @@ def swapParts(song):
   elif len(parts) is 2:
     return '"%s" - %s' % (parts[1], parts[0])
 
-  else:
-    return '"%s" - %s (%s)' % (parts[2], parts[1], parts[0])
-          
+  elif len(parts) > 3:
+    parts[2:] = [' - '.join(parts[2:])]
+
+  return '"%s" - %s (%s)' % (parts[2], parts[1], parts[0])
+
+
 def fitToSize(line, length = 140):
   n = len(line)
   if n <= length:
