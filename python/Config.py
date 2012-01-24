@@ -1,16 +1,20 @@
 #!/usr/bin/python
 
 FILL = ' [...] '
-ROOT_URL = 'http://ax.to:8000/'
 
-STATUS_URL = ROOT_URL + 'data.xsl'
-LISTENER_URL = ROOT_URL + 'admin/listclients.xsl?mount=/radio'
+LISTENER = {'url': 'admin/listclients.xsl?mount=/radio',
+            'filepath': 'listeners.html',
+            'interval': 15}
 
-ADMIN = ROOT_URL + 'admin/', 'admin', 'wombatwombat'
-GENERATED_FILES = '/home/radio/radio/public_html/generated/'
+STATUS = {'url': 'playerStatus.xsl',
+          'filepath': 'listeners.html',
+          'interval': 1}
+
+ADMIN = (ROOT_URL + 'admin/', 'admin', 'wombatwombat')
+
 
 STATUS_FILE = GENERATED_FILES + 'status.html'
-LISTENER_FILE = GENERATED_FILES + 'listeners.html'
+LISTENER_FILE =
 
 STATUS_INTERVAL = 1
 LISTENER_INTERVAL = 15

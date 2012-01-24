@@ -11,78 +11,68 @@ import File
 import FixText
 import Secret
 
-JSON_FIELDS = (('online', '1'),
-               ('title', ''),
-               ('listeners', '0'),
-               ('unique', '0'),
-               ('bitrate', '128'),
-               ('error', ''))
+JSON_FIELDS = {
+  'online': '1',
+  'title': '',
+  'listeners': '0',
+  'unique': '0',
+  'bitrate': '128',
+  'error': ''}
 
 
-PREVIOUS_TITLE = readFile(Config.TITLE_FILE)
-
-def getStatusRecord():
+def getStatusRecord(data):
   status = {}
-
   try:
-    dom = xml.dom.minidom.parse(urllib2.urlopen(Config.STATUS_DATA_URL))
+    dom = xml.dom.minidom.parse(data)
     items = dom.getElementsByTagName('item')
-    if items:
-      for child in items[0].childNodes:
-        name = child.tagName
-        if child.childNodes:
-          text = child.childNodes[0].wholeText
-          if name == 'title':
-            text = FixText.fixStatusTitle(text)
-          status[name] = text
-  except:
-    print "Couldn't read status record for", Config.STATUS_DATA_URL)
+    for child in items[0].childNodes:
+      name = child.tagName
+      text = child.childNodes[0].wholeText
+      if name == 'title':
+        text = FixText.fixStatusTitle(text)
+      status[name] = text
 
-  return status
+  except Exception as e:
+    print "Couldn't read status record for", Config.STATUS_DATA_URL
+    print e
 
-
-def getJson(status, **kwds):
-  a = dict((k, status.get(k, d)) for k, d in JSON_FIELDS)
-  a.update(**kwds)
-  return a
+  return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
 
 
-def onNewStatus(status, title):
-  scroller = Scroller.scroll(readFile(Config.SCROLLER_FILE), title)
-  if scroller:
-    File.replaceAtomic(Config.SCROLLER_FILE, scroller)
-    status = StatusRecord.getJson(status, scroller=scroller)
-    if status:
-      File.replaceAtomic(Config.JSON_FILE, json.dumps(status))
+class StatusJob(Job.Job):
+  MAX_TITLES = 20
 
+  API = twitter.Api(
+    consumer_key = Secret.consumer_key,
+    consumer_secret = Secret.consumer_secret,
+    access_token_key = Secret.access_token_key,
+    access_token_secret = Secret.access_token_secret)
 
-def getStatus(onNewStatus):
-  status = getStatusRecord(URL)
-  title = status.get('title', '')
-  if title and title != PREVIOUS_TITLE:
-    global PREVIOUS_TITLE
-    PREVIOUS_TITLE = title
-    File.replaceAtomic(Config.TITLE_FILE, title)
-
-    onNewStatus(status, title)
-
-  return title
-
-      status = Status.getNewStatus()
-      if status and status.title:
-        Config.log('New status %s', status.title)
-        if Config.POST_TO_TWITTER:
-          API.PostUpdate(status.title)
-
-API = twitter.Api(
-  consumer_key = Secret.consumer_key,
-  consumer_secret = Secret.consumer_secret,
-  access_token_key = Secret.access_token_key,
-  access_token_secret = Secret.access_token_secret)
-
-
-class StatusJob(object):
   def __init__(self):
-    self.interval = Config.STATUS_INTERVAL
-    self.callback = getStatus
+    Job.Job.init(self, self._process, **Config.STATUS)
+    self.output = self.output or {}
+
+  def newOutput(self, output):
+    Job.Job.newOutput(self, output)
+    pass
+
+  def _process(self, data):
+    output = getStatusRecord(data)
+    if output:
+      titleList = self.output.get('titleList', [])
+      index = (1 + tl[0]['index']) if tl else 0
+      titleList.insert(0, {'index': index, 'title': output.title})
+      while len(titleList) > StatusJob.MAX_TITLES:
+        titleList.pop()
+      self.output['titleList'] = titleList
+    return output
+
+  def onOutputChanged(self, output):
+    Job.Job.onOutputChanged(self, output)
+    if Config.POST_TO_TWITTER:
+      StatusJob.API.PostUpdate(status.title)
+
+
+
+
 
