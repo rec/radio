@@ -1,23 +1,19 @@
 #!/usr/bin/python
 
+import Job
+
 FILL = ' [...] '
 
-LISTENER = {'url': 'admin/listclients.xsl?mount=/radio',
-            'filepath': 'listeners.html',
-            'interval': 15}
+LISTENER = Job.Desc(url='admin/listclients.xsl?mount=/radio',
+                    filepath='listeners.html',
+                    interval=15)
 
-STATUS = {'url': 'playerStatus.xsl',
-          'filepath': 'listeners.html',
-          'interval': 1}
+STATUS = Job.Desc(url='playerStatus.xsl',
+                  filepath='listeners.html',
+                  interval=1)
 
-ADMIN = (ROOT_URL + 'admin/', 'admin', 'wombatwombat')
+ADMIN = (Job.Job.ROOT_URL + 'admin/', 'admin', 'wombatwombat')
 
-
-STATUS_FILE = GENERATED_FILES + 'status.html'
-LISTENER_FILE =
-
-STATUS_INTERVAL = 1
-LISTENER_INTERVAL = 15
 POST_TO_TWITTER = False
 LOGGING_ENABLED = True
 

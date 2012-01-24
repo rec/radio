@@ -8,6 +8,4 @@ import Listeners
 import Status
 
 
-Job.runJobs(Job.job(Status.getStatus, callback=Status.newStatus,
-                    **Config.STATUS),
-            Job.job(Listeners.getListeners, **Config.LISTENER))
+Job.runJobs(Status.StatusJob(), Listeners.listenerJob())

@@ -49,12 +49,8 @@ class StatusJob(Job.Job):
     access_token_secret = Secret.access_token_secret)
 
   def __init__(self):
-    Job.Job.init(self, self._process, **Config.STATUS)
+    Job.Job.init(self, Config.STATUS, self._process)
     self.output = self.output or {}
-
-  def newOutput(self, output):
-    Job.Job.newOutput(self, output)
-    pass
 
   def _process(self, data):
     output = getStatusRecord(data)
@@ -68,9 +64,10 @@ class StatusJob(Job.Job):
     return output
 
   def onOutputChanged(self, output):
+    if Config.POST_TO_TWITTER and output and output.title:
+      if not self.output or (self.output.get('title', None) != output.title):
+        StatusJob.API.PostUpdate(output.title)
     Job.Job.onOutputChanged(self, output)
-    if Config.POST_TO_TWITTER:
-      StatusJob.API.PostUpdate(status.title)
 
 
 

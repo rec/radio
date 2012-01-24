@@ -4,6 +4,8 @@ import operator
 
 import BeautifulSoup
 
+import Job
+
 def getListeners(data):
   listeners = []
   contents = BeautifulSoup.BeautifulSoup(data).find(id='listenerTable')
@@ -20,3 +22,5 @@ def getListeners(data):
   else:
     return listeners
 
+def listenerJob():
+  return Job.job(Config.LISTENER, Listeners.getListeners)

@@ -1,25 +1,27 @@
 #!/usr/bin/python
 
+import collections
+
+Desc = collections.namedtuple('Desc', 'filepath interval url')
+
 class Job(object):
   ROOT_URL = 'http://ax.to:8000/'
   GENERATED_FILES = '/home/radio/radio/public_html/generated/'
 
-  def __init__(self, process, interval, url, filepath):
+  def __init__(self, desc, process):
+    self.desc = desc
     self.process = process
-    self.interval = interval
-    self.url = url
-    self.filepath = filepath
     self.output = File.readFile(Job.GENERATED_FILES + self.filepath)
 
   def run(self, time):
     if not (time % self.interval):
-      output = self.process(File.readUrl(Job.ROOT_URL + self.url))
+      output = self.process(File.readUrl(Job.ROOT_URL + self.desc.url))
       if output != self.output:
         self.onOutputChanged(output)
-    return (-(t + 1) % self.interval) + 1
+    return (-(t + 1) % self.desc.interval) + 1
 
   def onOutputChanged(self, output):
-    File.replaceAtomic(Job.GENERATED_FILES + self.filepath, output)
+    File.replaceAtomic(Job.GENERATED_FILES + self.desc.filepath, output)
     self.output = output
 
 
