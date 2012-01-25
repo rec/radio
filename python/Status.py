@@ -23,13 +23,11 @@ JSON_FIELDS = {
   'bitrate': '128',
   'error': ''}
 
-
 def getStatusRecord(data):
   status = {}
   try:
     dom = xml.dom.minidom.parseString(data)
     item = dom.getElementsByTagName('item')[0]
-    print '****', item
 
     for child in item.childNodes:
       name = child.tagName
@@ -63,9 +61,7 @@ class StatusJob(Job.Job):
       return (out or {}).get('title', None)
 
     output = getStatusRecord(data)
-    print output
     title = getTitle(output)
-    print title, getTitle(self.output)
     if title == getTitle(self.output):
       return self.output
 
@@ -75,7 +71,7 @@ class StatusJob(Job.Job):
       titleList.insert(0, {'index': index, 'title': title})
       while len(titleList) > StatusJob.MAX_TITLES:
         titleList.pop()
-      self.output['titleList'] = titleList
+      output['titleList'] = titleList
     return output
 
   def onOutputChanged(self, output):
