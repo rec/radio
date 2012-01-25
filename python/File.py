@@ -37,6 +37,7 @@ def replaceAtomic(filename, value):
 
   try:
     os.rename(tmpname, filename)
+    Config.log('Wrote ' + filename)
     return True
 
   except:

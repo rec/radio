@@ -17,6 +17,7 @@ class Job(object):
     if not (time % self.desc.interval):
       output = self.process(File.readUrl(Config.ROOT_URL + self.desc.url))
       if output != self.output:
+        print output, '!', self.output
         self.onOutputChanged(output)
     return (-(time + 1) % self.desc.interval) + 1
 

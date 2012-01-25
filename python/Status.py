@@ -15,7 +15,7 @@ import Job
 import Secret
 
 JSON_FIELDS = {
-  'online': '1',
+  'online': '0',
   'title': '',
   'listeners': '0',
   'unique': '0',
@@ -31,7 +31,7 @@ def getStatusRecord(data):
     for child in items[0].childNodes:
       name = child.tagName
       text = child.childNodes[0].wholeText
-      if name == 'title':
+      if name == 'title' and text:
         text = FixText.fixStatusTitle(text)
       status[name] = text
 
@@ -54,12 +54,21 @@ class StatusJob(Job.Job):
     Job.Job.__init__(self, Config.STATUS, self._process)
     self.output = self.output or {}
 
+  def isTitleChanged(self, output):
+
   def _process(self, data):
+    def getTitle(out):
+      return (out or {}).get('title', None)
+
     output = getStatusRecord(data)
-    if output:
+    title = getTitle(output)
+    if title == getTitle(self.output):
+      return self.output
+
+    if title:
       titleList = self.output.get('titleList', [])
       index = (1 + titleList[0]['index']) if titleList else 0
-      titleList.insert(0, {'index': index, 'title': output['title']})
+      titleList.insert(0, {'index': index, 'title': title})
       while len(titleList) > StatusJob.MAX_TITLES:
         titleList.pop()
       self.output['titleList'] = titleList
@@ -70,8 +79,3 @@ class StatusJob(Job.Job):
       if not self.output or (self.output.get('title', None) != output.title):
         StatusJob.API.PostUpdate(output.title)
     Job.Job.onOutputChanged(self, output)
-
-
-
-
-
