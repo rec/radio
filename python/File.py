@@ -19,7 +19,7 @@ def readUrl(url):
   try:
     return OPENER.open(url).read()
   except:
-    print "Couldn't open URL", url
+    Config.log("Couldn't open URL" + url)
     return None
 
 def replaceAtomic(filename, value):
@@ -32,7 +32,6 @@ def replaceAtomic(filename, value):
 
   except:
     print "Couldn't write to", tmpname, value
-    raise
     return False
 
   try:
@@ -42,7 +41,6 @@ def replaceAtomic(filename, value):
 
   except:
     print "Couldn't rename", tmpname, "to", filename
-    raise
     return False
 
 def readFile(f):

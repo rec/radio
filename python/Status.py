@@ -17,6 +17,7 @@ import Secret
 JSON_FIELDS = {
   'online': '0',
   'title': '',
+  'titleList': '',
   'listeners': '0',
   'unique': '0',
   'bitrate': '128',
@@ -53,8 +54,6 @@ class StatusJob(Job.Job):
   def __init__(self):
     Job.Job.__init__(self, Config.STATUS, self._process)
     self.output = self.output or {}
-
-  def isTitleChanged(self, output):
 
   def _process(self, data):
     def getTitle(out):
