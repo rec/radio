@@ -49,15 +49,16 @@ class StatusJob(Job.Job):
     access_token_secret = Secret.access_token_secret)
 
   def __init__(self):
-    Job.Job.init(self, Config.STATUS, self._process)
+    Job.Job.__init__(self, Config.STATUS, self._process)
     self.output = self.output or {}
 
   def _process(self, data):
     output = getStatusRecord(data)
     if output:
       titleList = self.output.get('titleList', [])
-      index = (1 + tl[0]['index']) if tl else 0
-      titleList.insert(0, {'index': index, 'title': output.title})
+      index = (1 + titleList[0]['index']) if titleList else 0
+      print output
+      titleList.insert(0, {'index': index, 'title': output['title']})
       while len(titleList) > StatusJob.MAX_TITLES:
         titleList.pop()
       self.output['titleList'] = titleList
