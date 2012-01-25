@@ -10,7 +10,8 @@ class Job(object):
   def __init__(self, desc, process):
     self.desc = desc
     self.process = process
-    self.output = File.readFile(Config.GENERATED_FILES + desc.filepath)
+    data = File.readFile(Config.GENERATED_FILES + desc.filepath) or '{}'
+    self.output = json.loads(data)
 
   def run(self, time):
     if not (time % self.desc.interval):

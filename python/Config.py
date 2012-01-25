@@ -10,11 +10,11 @@ GENERATED_FILES = '/home/radio/radio/public_html/generated/'
 FILL = ' [...] '
 
 LISTENER = JobDesc(url='admin/listclients.xsl?mount=/radio',
-                   filepath='listeners.html',
+                   filepath='listeners.json',
                    interval=15)
 
 STATUS = JobDesc(url='playerStatus.xsl',
-                 filepath='listeners.html',
+                 filepath='status.json',
                  interval=1)
 
 ADMIN = (ROOT_URL + 'admin/', 'admin', 'wombatwombat')

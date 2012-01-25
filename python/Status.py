@@ -36,7 +36,7 @@ def getStatusRecord(data):
       status[name] = text
 
   except Exception as e:
-    traceback.print_exc(file=sys.stdout)
+    pass
 
   return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
 
@@ -59,7 +59,6 @@ class StatusJob(Job.Job):
     if output:
       titleList = self.output.get('titleList', [])
       index = (1 + titleList[0]['index']) if titleList else 0
-      print output
       titleList.insert(0, {'index': index, 'title': output['title']})
       while len(titleList) > StatusJob.MAX_TITLES:
         titleList.pop()

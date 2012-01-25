@@ -19,7 +19,7 @@ def readUrl(url):
   try:
     return OPENER.open(url).read()
   except:
-    print "Couldn't open", url
+    print "Couldn't open URL", url
     return None
 
 def replaceAtomic(filename, value):
@@ -49,6 +49,6 @@ def readFile(f):
     return open(f).read()
 
   except:
-    print "Couldn't open", f
+    print "Couldn't open file", f
     return None
 
