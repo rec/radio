@@ -2,6 +2,8 @@
 
 import json
 import os
+import sys
+import traceback
 import twitter
 import urllib2
 import xml.dom.minidom
@@ -24,7 +26,7 @@ JSON_FIELDS = {
 def getStatusRecord(data):
   status = {}
   try:
-    dom = xml.dom.minidom.parse(data)
+    dom = xml.dom.minidom.parseString(data)
     items = dom.getElementsByTagName('item')
     for child in items[0].childNodes:
       name = child.tagName
@@ -34,7 +36,7 @@ def getStatusRecord(data):
       status[name] = text
 
   except Exception as e:
-    print e
+    traceback.print_exc(file=sys.stdout)
 
   return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
 

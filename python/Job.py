@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import json
 import time
 
 import Config
@@ -19,7 +20,8 @@ class Job(object):
     return (-(time + 1) % self.desc.interval) + 1
 
   def onOutputChanged(self, output):
-    File.replaceAtomic(Config.GENERATED_FILES + self.desc.filepath, output)
+    File.replaceAtomic(Config.GENERATED_FILES + self.desc.filepath,
+                       json.dumps(output))
     self.output = output
 
 

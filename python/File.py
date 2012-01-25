@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+import os
+import sys
+import traceback
 import urllib2
 
 import Config
@@ -28,7 +31,8 @@ def replaceAtomic(filename, value):
     f.close()
 
   except:
-    print "Couldn't write to", tmpname
+    print "Couldn't write to", tmpname, value
+    raise
     return False
 
   try:
@@ -37,6 +41,7 @@ def replaceAtomic(filename, value):
 
   except:
     print "Couldn't rename", tmpname, "to", filename
+    raise
     return False
 
 def readFile(f):
