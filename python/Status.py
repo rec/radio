@@ -17,7 +17,7 @@ import Secret
 JSON_FIELDS = {
   'online': '0',
   'title': '',
-  'titleList': '',
+  'titleList': [],
   'listeners': '0',
   'unique': '0',
   'bitrate': '128',
@@ -28,16 +28,19 @@ def getStatusRecord(data):
   status = {}
   try:
     dom = xml.dom.minidom.parseString(data)
-    items = dom.getElementsByTagName('item')
-    for child in items[0].childNodes:
-      name = child.tagName
-      text = child.childNodes[0].wholeText
-      if name == 'title' and text:
-        text = FixText.fixStatusTitle(text)
-      status[name] = text
+    item = dom.getElementsByTagName('item')[0]
+    print '****', item
 
-  except Exception as e:
-    pass
+    for child in item.childNodes:
+      name = child.tagName
+      if child.childNodes:
+        text = child.childNodes[0].wholeText
+        if name == 'title' and text:
+          text = FixText.fixTitle(text)
+        status[name] = text
+
+  except:
+    traceback.print_exc(file=sys.stdout)
 
   return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
 
@@ -60,7 +63,9 @@ class StatusJob(Job.Job):
       return (out or {}).get('title', None)
 
     output = getStatusRecord(data)
+    print output
     title = getTitle(output)
+    print title, getTitle(self.output)
     if title == getTitle(self.output):
       return self.output
 

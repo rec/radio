@@ -38,6 +38,6 @@ def fixHTML(s):
           replace('"', '&quot;').
           replace("'", '&#39;'))
 
-def fixSongTitle(title):
+def fixTitle(title):
   return fitToSize(swapParts(title))
 
