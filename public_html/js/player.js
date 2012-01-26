@@ -9,7 +9,8 @@ var innDiv;
 var fetchInterval = 1000;
 
 var parts = [
-    '<li style="' +
+    '<li class="lines"' +
+    'style="' +
     'font-size:13px; ' +
     'line-height: 20px; ' +
     'height: 20px; ' +
