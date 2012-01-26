@@ -1,14 +1,27 @@
 * { border:none; padding:0; margin:0; font-family:Arial; }
-body { background:#000; } 
+
+body { background:#000; }
+
 #content { margin:20px auto; width:540px; position:relative; }
-#inner { background:#F0F0F0; padding:20px; }
-#inner h1 { color:#333; font-size:16px; margin-bottom:10px; }
+
+#inner { background:#F0F0F0; padding:20px;  float:left; clear:left; width: 500px; }
+
+/*
+#inner h1 { color:#333; font-size:16px; margin-bottom:100px; }
+
 #inner p { color:#333; font-size:12px; }
+
 #inner p a { color:green;}
-.box { float:left; clear:left; width:500px; }
+*/
+
+
 #tunein { border-top:2px solid #333; padding-top:10px; margin-top:10px;}
-#tunein span { float:left; clear:left; width:70px; color:#333; font-size:14px; font-weight:bold; line-height:26px;  }
+
+#tunein span { float:left; clear:left; width:70px; color:#333; font-size:14px; font-weight:bold; line-h
+eight:26px;  }
+
 #footer { margin-top:10px; color:#CCC; font-size:12px; }
+
 #footer  a { color:#CCC; font-weight:bold; }
+
 #logo { background:url(../images/background_body.jpg) repeat-x; float:left; clear:left; width:500px; height:20; padding:20px; }
-#fortune { color:#FF0000; }

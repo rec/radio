@@ -4,7 +4,7 @@ import collections
 
 JobDesc = collections.namedtuple('Desc', 'filepath interval url')
 
-ROOT_URL = 'http://ax.to:8000/'
+ROOT_URL = 'http://radio.swirly.com:8000/'
 GENERATED_FILES = '/home/radio/radio/public_html/generated/'
 
 FILL = ' [...] '

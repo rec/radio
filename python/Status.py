@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import datetime
 import json
 import os
 import sys
@@ -68,7 +69,8 @@ class StatusJob(Job.Job):
     if title:
       titleList = self.output.get('titleList', [])
       index = (1 + titleList[0]['index']) if titleList else 0
-      titleList.insert(0, {'index': index, 'title': title})
+      time = time=datetime.datetime.now().strftime('%H:%M')
+      titleList.insert(0, {'index': index, 'title': title, 'time': time})
       while len(titleList) > StatusJob.MAX_TITLES:
         titleList.pop()
       output['titleList'] = titleList

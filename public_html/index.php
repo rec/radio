@@ -9,13 +9,15 @@ require_once "php/head.php";
 
 <body>
   <div id="content">
-    <div id="inner" class="box">
+    <div id="inner">
       <img src="images/favicon.ico"/>
       <?php require "php/player.php"; ?>
       <?php require "php/twitter.php"; ?>
       <?php require "php/tune-in.php"; ?>
       <?php require "php/footer.php"; ?>
     </div>
-  </body>
+  </div>
+</body>
 
 </html>
+

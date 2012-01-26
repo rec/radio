@@ -8,46 +8,104 @@ var stationOnline;
 var innDiv;
 var fetchInterval = 1000;
 
-function requestSongJson() {  
-  var url = "generated/json.html";
-  var myAjax = new Ajax.Request( url,  {method: 'get',  parameters: "", 
-	onComplete: jsonArrived});
+var parts = [
+    '<li style="' +
+    'font-size:13px; ' +
+    'line-height: 20px; ' +
+    'height: 20px; ' +
+    'overflow: hidden; ' +
+    'border-bottom: 1px dotted #CCC; ' +
+    'color: #333; ',
+    //                       '{alternate}' +
+    '"> <span style="color:#AF7B00;">',
+    // '{time}',
+    '</span> ',
+    //'{title}' +
+    '</li>'];
+
+var alternates = ['background: #F0F0F0',
+                  'background: #CCC'];
+
+function makeScrollerLine(titleRecord) {
+  return [parts[0],
+          alternates[titleRecord.index % alternates.length],
+          parts[1],
+          titleRecord.time,
+          parts[2],
+          titleRecord.title,
+          parts[3]].join('');
 };
 
-function jsonArrived(originalRequest) {
+function makeScroller(titleList) {
+  var scroller = [];
+  for (var i = 0; i < titleList.length; ++i)
+    scroller[i] = makeScrollerLine(titleList[i]);
+  return scroller.join('\n');
+};
+
+function requestStatus() {
+  var url = "generated/status.json";
+  var myAjax = new Ajax.Request(url,
+                                {method: 'get',
+                                 parameters: "",
+                                 onComplete: statusArrived});
+};
+
+function setListenerCount(listeners) {
+  document.getElementById('CurrListeners').innerHTML = listeners +
+    (' listener' + ((listeners == 1) ? '' : 's') + ' online.');
+};
+
+function statusArrived(request) {
   try {
-    data = originalRequest.responseText.evalJSON();
+    data = request.responseText.evalJSON();
     songTitle = data.title || '(no song)';
-    var listeners = data.listeners || 0;
-    listeners += (' listener' + ((listeners == 1) ? '' : 's') + ' online');
-    document.getElementById('CurrListeners').innerHTML = listeners;
-    document.getElementById('SongHistory').innerHTML = data.scroller;
+    setListenerCount(data.listeners || 0);
+    document.getElementById('SongHistory').innerHTML =
+      makeScroller(data.titleList || []);
   } catch(e) {}
-  setTimeout("requestSongJson()", fetchInterval);
+  setTimeout("requestStatus()", fetchInterval);
+};
+
+function requestListeners() {
+  var url = "generated/listeners.json.saved";
+  var myAjax = new Ajax.Request(url,
+                                {method: 'get',
+                                 parameters: "",
+                                 onComplete: listenersArrived});
+};
+
+function listenersArrived(request) {
+  try {
+    listeners = request.responseText.evalJSON();
+    setListenerCount(listeners.length);
+  } catch(e) {}
+  setTimeout("requestStatus()", fetchInterval);
 };
 
 function songTitleScroller() {
   var mainMessage = songTitle + "...         ";
   var tempLoc = Math.max((scrollingRegion * 3 / mainMessage.length) + 1, 1);
   var m = mainMessage;
-  
+
   for (var counter = 0; counter <= tempLoc; counter++)
     mainMessage += m;
-    
+
   var s = mainMessage.substring(startPosition,
 				startPosition + scrollingRegion);
   document.getElementById('SongTitleDiv').value = s;
   startPosition++;
-    
-  if (startPosition > scrollingRegion) 
+
+  if (startPosition > scrollingRegion)
     startPosition = 0;
-    
-  setTimeout("songTitleScroller()", scrollInterval); 
+
+  setTimeout("songTitleScroller()", scrollInterval);
 }
 
 jQuery(document).ready(
   function() {
     songTitleScroller();
-    requestSongJson();
+    requestStatus();
+    requestListeners();
   }
 );
