@@ -2,7 +2,7 @@ var x = 0;
 var scrollInterval = 150;
 var songTitle = '(no song)';
 var startPosition = 0;
-var scrollingRegion = 80;
+var scrollingRegion = 140;
 var songTitleDiv;
 var stationOnline;
 var innDiv;
@@ -17,11 +17,11 @@ var parts = [
     'overflow: hidden; ' +
     'border-bottom: 1px dotted #CCC; ' +
     'color: #333; ',
-    //                       '{alternate}' +
+
     '"> <span style="color:#AF7B00;">',
-    // '{time}',
+
     '</span> ',
-    //'{title}' +
+
     '</li>'];
 
 var alternates = ['background: #F0F0F0',

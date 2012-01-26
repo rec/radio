@@ -1,4 +1,9 @@
-* { border:none; padding:0; margin:0; font-family:Arial; }
+* {
+  border:none;
+  padding:0;
+  margin:0;
+  font-family:Arial;
+}
 
 body {
   background:#000;
@@ -22,15 +27,6 @@ body {
   clear:left;
   padding: 10px; }
 
-#player {
-  background:#F0F0F0;
-  float:left;
-  clear:left;
-  height:420px;
-  text-align:left;
-  font-family:Arial;
-}
-
 #subplayer {
   padding:6px;
   float:left;
@@ -41,7 +37,7 @@ body {
   background:#F0F0F0;
   float:left;
   clear:left;
-  height:420px;
+  height:360px;
   text-align:left;
   font-family:Arial;
 }
@@ -90,7 +86,7 @@ body {
   margin-top:20px;
   padding-bottom:5px;
   font-weight:bold;
-  border-bottom:1px dotted #CCC }
+}
 
 #LastPlayedSongs {
   float:left;
@@ -104,7 +100,7 @@ body {
   line-height:14px;
   font-size:12px;
   list-style:none;
-  height:280px;
+  height:255px;
   margin-top:10px;
   overflow:auto;
 }
@@ -117,9 +113,20 @@ body {
   margin-top:10px;
   color:#CCC;
   font-size:12px;
+  position: relative;
+  top: 5px;
 }
 
-#footer  a {
+#footer a {
   color:#CCC;
   font-weight:bold;
+}
+
+#player_preview {
+  padding-below: 50px;
+}
+
+#twitter {
+  position: relative;
+  top: 10px;
 }

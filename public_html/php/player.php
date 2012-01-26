@@ -9,34 +9,28 @@
           <div id="MainTitle">swirly radio international</div>
         </td>
         <td align="right" id="Listeners">
-          <div id="ListenersDiv"><b id="CurrListeners"></b></div>
+          <div id="ListenersDiv">
+            <b id="CurrListeners"/>
+          </div>
         </td>
       </tr>
     </table>
-    <div id="StationOnline">
-      <input id="SongTitleDiv">
-    </div>
-
-    <div id="LastPlayedSongsDiv">
-      <span id="LastPlayedSongs">Last played songs</span>
-    </div>
-
+    <input id="SongTitleDiv">
     <ul id="SongHistory"/>
   </div>
 </div>
 
+<div id="player_preview" class="box" align="center"></div>
+
 <script type="text/javascript" src="js/swfobject.js"></script>
 
-<div id="player_preview" class="box"></div>
-
 <script type="text/javascript">
-  var so = new SWFObject('swf/player.swf', 'mpl', 500, 20, '9');
+  var so = new SWFObject('swf/player.swf', 'mpl', 400, 20, '9');
 
   so.addParam('allowscriptaccess','always');
   so.addParam('allowfullscreen','true');
   so.addVariable('type', 'sound');
   so.addVariable('file', 'http://radio.swirly.com:8000/radio');
   so.addVariable('autoplay', 'true');
-  so.write('player_preview')
-
+  so.write('player_preview');
 </script>

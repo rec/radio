@@ -1,11 +1,12 @@
 <div id="twitter" class="box">
+
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 
 <script>
   new TWTR.Widget({
     version: 2,
     type: 'profile',
-    rpp: 5,
+    rpp: 3,
     interval: 10000,
     width: "auto",
     theme: {
