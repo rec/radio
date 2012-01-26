@@ -8,7 +8,7 @@ require_once "php/head.php";
 ?>
 
 <body>
-  <div id="content">
+  <div id="outer">
     <div id="inner">
       <img src="images/favicon.ico"/>
       <?php require "php/player.php"; ?>
