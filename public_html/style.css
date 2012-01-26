@@ -17,6 +17,8 @@ body { background:#000; }
 		               width:490px; font-weight:bold; border:none; background:none;
                    float:right; clear:right;}
 #ListenersDiv {color:#666; line-height:14px; font-size:12px;}
+#LastPlayedSongsDiv {color:#AF7B00; font-size:13px; height:20px; margin-top:20px;
+	       padding-bottom:5px;  font-weight:bold; border-bottom:1px dotted #CCC }
 
 #inner { background:#F0F0F0; padding:20px;  float:left; clear:left; width: 770px; }
 

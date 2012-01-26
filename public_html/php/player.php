@@ -10,8 +10,7 @@
        <b id="CurrListeners"></b></div>
    </div>
 
-   <div id="LastPlayedSongsDiv" style="color:#AF7B00; font-size:13px; height:20px; margin-top:20px;
-	       padding-bottom:5px;  font-weight:bold; border-bottom:1px dotted #CCC ">
+   <div id="LastPlayedSongsDiv">
      <span style="float:left; margin-right:10px; width:130px;">Last played songs</span>
        </div>
    <ul style="position:absolute; left:20px;padding:0px; color:#666;
