@@ -2,17 +2,15 @@
 
 body { background:#000; width: 100% }
 
-#outer { margin:20px auto; width: 800px; position:relative; }
+#outer { margin-top:20px; margin-left: auto; margin-right: auto; width: 800px; position:relative; }
 #inner { background:#F0F0F0; padding:20px; float:left; clear:left; width: 780px; }
 
-
-#StationOnline { display: block; }
 #player { background:#F0F0F0; float:left; clear:left;
           height:420px; text-align:left; font-family:Arial;}
-#subplayer { padding:6px; float:left; clear:left; width:488px; }
-#playerTop {background:#F0F0F0; float:left; clear:left; width:500px;
+#subplayer { padding:6px; float:left; clear:left; }
+#playerTop {background:#F0F0F0; float:left; clear:left;
             height:420px; text-align:left; font-family:Arial;}
-#player2 {padding:6px; float:left; clear:left; width:488px}
+#player2 {padding:6px; float:left; clear:left}
 #MainTitle {color:#AF7B00; font-weight:bold; font-size:16px;
                  text-align:left; width:100%; float:left; margin-bottom:0px; }
 #SongTitleDiv {color:#333; line-height:20px; padding:10px 0; font-size:14px;
