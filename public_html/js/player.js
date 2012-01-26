@@ -103,10 +103,21 @@ function songTitleScroller() {
   setTimeout("songTitleScroller()", scrollInterval);
 }
 
+function initializeMap() {
+  var myOptions = {
+    center: new google.maps.LatLng(40.719569, -73.961105),
+    zoom: 2,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map_canvas"),
+    myOptions);
+};
+
 jQuery(document).ready(
   function() {
     songTitleScroller();
     requestStatus();
     requestListeners();
+    initializeMap();
   }
 );
