@@ -4,10 +4,8 @@
        swirly radio international
      </div>
    <div id="StationOnline">
-     <input style="color:#333; line-height:20px; padding:10px 0; font-size:14px;
-		               width:490px; font-weight:bold; border:none; background:none;
-                   float:right; clear:right;"
-            id="SongTitleDiv">
+     <input id="SongTitleDiv">
+
      <div style="color:#666; line-height:14px; font-size:12px;" id="ListenersDiv">
        <b id="CurrListeners"></b></div>
    </div>

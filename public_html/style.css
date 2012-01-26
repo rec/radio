@@ -13,6 +13,9 @@ body { background:#000; }
 #player2 {padding:6px; float:left; clear:left; width:488px}
 #MainTitle {color:#AF7B00; font-weight:bold; font-size:16px;
                  text-align:left; width:100%; float:left; margin-bottom:0px; }
+#SongTitleDiv {color:#333; line-height:20px; padding:10px 0; font-size:14px;
+		               width:490px; font-weight:bold; border:none; background:none;
+                   float:right; clear:right;}
 
 #inner { background:#F0F0F0; padding:20px;  float:left; clear:left; width: 770px; }
 
