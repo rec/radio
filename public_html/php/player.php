@@ -6,11 +6,11 @@
    <div id="StationOnline">
      <input id="SongTitleDiv">
 
-     <div style="color:#666; line-height:14px; font-size:12px;" id="ListenersDiv">
+     <div id="ListenersDiv">
        <b id="CurrListeners"></b></div>
    </div>
 
-   <div style="color:#AF7B00; font-size:13px; height:20px; margin-top:20px;
+   <div id="LastPlayedSongsDiv" style="color:#AF7B00; font-size:13px; height:20px; margin-top:20px;
 	       padding-bottom:5px;  font-weight:bold; border-bottom:1px dotted #CCC ">
      <span style="float:left; margin-right:10px; width:130px;">Last played songs</span>
        </div>

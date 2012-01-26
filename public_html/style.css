@@ -16,6 +16,7 @@ body { background:#000; }
 #SongTitleDiv {color:#333; line-height:20px; padding:10px 0; font-size:14px;
 		               width:490px; font-weight:bold; border:none; background:none;
                    float:right; clear:right;}
+#ListenersDiv {color:#666; line-height:14px; font-size:12px;}
 
 #inner { background:#F0F0F0; padding:20px;  float:left; clear:left; width: 770px; }
 
