@@ -5,6 +5,9 @@ body { background:#000; }
 #songHistory { width: 780px; }
 #content { margin:20px auto; width:800px; position:relative; }
 #StationOnline { display: block; }
+#player { background:#F0F0F0; float:left; clear:left; width:500px;
+          height:420px; text-align:left; font-family:Arial;}
+#subplayer { padding:6px; float:left; clear:left; width:488px; }
 
 #inner { background:#F0F0F0; padding:20px;  float:left; clear:left; width: 770px; }
 
