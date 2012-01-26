@@ -45,8 +45,6 @@ def getStatusRecord(data):
 
 
 class StatusJob(Job.Job):
-  MAX_TITLES = 20
-
   API = twitter.Api(
     consumer_key = Secret.consumer_key,
     consumer_secret = Secret.consumer_secret,
@@ -71,7 +69,7 @@ class StatusJob(Job.Job):
       index = (1 + titleList[0]['index']) if titleList else 0
       time = time=datetime.datetime.now().strftime('%H:%M')
       titleList.insert(0, {'index': index, 'title': title, 'time': time})
-      while len(titleList) > StatusJob.MAX_TITLES:
+      while len(titleList) > Config.MAX_TITLES:
         titleList.pop()
       output['titleList'] = titleList
     return output

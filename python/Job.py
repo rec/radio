@@ -33,3 +33,5 @@ def runJobs(*jobs):
     delta = min(*[job.run(t) for job in jobs])
     t += delta
     time.sleep(delta)
+
+    reload(Config)

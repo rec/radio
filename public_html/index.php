@@ -10,7 +10,6 @@ require_once "php/head.php";
 <body>
   <div id="outer">
     <div id="inner">
-      <img src="images/favicon.ico"/>
       <?php require "php/player.php"; ?>
       <?php require "php/twitter.php"; ?>
 <!--      <?php require "php/tune-in.php"; ?> -->

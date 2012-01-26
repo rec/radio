@@ -1,11 +1,12 @@
 <div id="twitter" class="box">
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+
 <script>
   new TWTR.Widget({
     version: 2,
     type: 'profile',
-    rpp: 4,
-    interval: 30000,
+    rpp: 5,
+    interval: 10000,
     width: "auto",
     theme: {
       shell: {
@@ -25,6 +26,6 @@
       behavior: 'all'
     }
   }).render().setUser('swirlyRadio').start();
-  </script>
+</script>
 
 </div>

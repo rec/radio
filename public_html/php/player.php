@@ -1,11 +1,20 @@
 <div id="playerTop">
   <div id="player2">
-    <div id="MainTitle">
-      swirly radio international
-    </div>
+    <table id="TitleTable">
+      <tr>
+        <td style="float:left">
+          <img src="images/favicon.ico" width="40" height="40"/>
+        </td>
+        <td align="center">
+          <div id="MainTitle">swirly radio international</div>
+        </td>
+        <td align="right" id="Listeners">
+          <div id="ListenersDiv"><b id="CurrListeners"></b></div>
+        </td>
+      </tr>
+    </table>
     <div id="StationOnline">
       <input id="SongTitleDiv">
-      <div id="ListenersDiv"><b id="CurrListeners"></b></div>
     </div>
 
     <div id="LastPlayedSongsDiv">

@@ -18,6 +18,8 @@ STATUS = JobDesc(url='playerStatus.xsl',
                  interval=2)
 
 ADMIN = (ROOT_URL + 'admin/', 'admin', 'wombatwombat')
+MAX_TITLES = 200
+
 
 POST_TO_TWITTER = not True
 LOGGING_ENABLED = not True
