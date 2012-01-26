@@ -1,9 +1,6 @@
-<div style="background:#F0F0F0; float:left; clear:left; width:500px;
-            height:420px; text-align:left; font-family:Arial;">
-   <div style="padding:6px; float:left; clear:left; width:488px">
-     <div style="color:#AF7B00; font-weight:bold; font-size:16px;
-                 text-align:left; width:100%; float:left; margin-bottom:0px; "
-          id="MainTitle">
+<div id="playerTop">
+   <div id="player2">
+     <div id="MainTitle">
        swirly radio international
      </div>
    <div id="StationOnline">

@@ -8,6 +8,11 @@ body { background:#000; }
 #player { background:#F0F0F0; float:left; clear:left; width:500px;
           height:420px; text-align:left; font-family:Arial;}
 #subplayer { padding:6px; float:left; clear:left; width:488px; }
+#playerTop {background:#F0F0F0; float:left; clear:left; width:500px;
+            height:420px; text-align:left; font-family:Arial;}
+#player2 {padding:6px; float:left; clear:left; width:488px}
+#MainTitle {color:#AF7B00; font-weight:bold; font-size:16px;
+                 text-align:left; width:100%; float:left; margin-bottom:0px; }
 
 #inner { background:#F0F0F0; padding:20px;  float:left; clear:left; width: 770px; }
 
