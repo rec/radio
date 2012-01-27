@@ -7,14 +7,12 @@
 
 body {
   background:#000;
-  width: 100%
 }
 
 #outer {
   margin-top: 0px;
   margin-left: auto;
   margin-right:
-  width: 100%;
   position:relative;
   padding: 25px;
 }
@@ -25,12 +23,7 @@ body {
   padding:20px;
   float:left;
   clear:left;
-  padding: 10px; }
-
-#subplayer {
-  padding:6px;
-  float:left;
-  clear:left;
+  padding: 10px;
 }
 
 #playerTop {
@@ -40,12 +33,14 @@ body {
   height:362px;
   text-align:left;
   font-family:Arial;
+  width: 100%;
 }
 
 #player2 {
   padding:6px;
   float:left;
   clear:left;
+  width: 100%;
 }
 
 #MainTitle {
@@ -106,7 +101,7 @@ body {
   overflow:auto;
 }
 
-#TitleTable {
+#TitleTable{
   width:100%;
 }
 

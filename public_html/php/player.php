@@ -15,8 +15,8 @@
         </td>
       </tr>
     </table>
-    <input id="SongTitleDiv" width="100%">
-    <ul id="SongHistory" width="100%" />
+    <input id="SongTitleDiv">
+    <ul id="SongHistory" />
   </div>
 </div>
 
