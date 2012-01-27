@@ -7,9 +7,11 @@ import traceback
 import BeautifulSoup
 
 import Config
+import File
+import Geocode
 import Job
 
-def getListeners(data):
+def getRawListeners(data):
   listeners = []
   if data:
     try:
@@ -27,5 +29,16 @@ def getListeners(data):
 
   return sorted(listeners[1:], key=operator.itemgetter('time'))
 
-def listenerJob():
-  return Job.Job(Config.LISTENER, getListeners)
+
+class ListenerJob(Job.Job):
+  def __init__(self):
+    Job.Job.__init__(self, Config.LISTENER)
+    self.output = self.output or {}
+
+  def process(self, data):
+    return getRawListeners(data);
+
+
+LISTENERS = {'broadcast' : Config.BROADCASTER,
+             'listeners' : {}};
+

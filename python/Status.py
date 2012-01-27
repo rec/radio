@@ -52,10 +52,10 @@ class StatusJob(Job.Job):
     access_token_secret = Secret.access_token_secret)
 
   def __init__(self):
-    Job.Job.__init__(self, Config.STATUS, self._process)
+    Job.Job.__init__(self, Config.STATUS)
     self.output = self.output or {}
 
-  def _process(self, data):
+  def process(self, data):
     def getTitle(out):
       return (out or {}).get('title', None)
 

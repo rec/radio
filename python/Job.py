@@ -7,9 +7,8 @@ import Config
 import File
 
 class Job(object):
-  def __init__(self, desc, process):
+  def __init__(self, desc):
     self.desc = desc
-    self.process = process
     data = File.readFile(Config.GENERATED_FILES + desc.filepath) or '{}'
     self.output = json.loads(data)
 

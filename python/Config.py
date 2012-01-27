@@ -17,6 +17,12 @@ STATUS = JobDesc(url='playerStatus.xsl',
                  filepath='status.json',
                  interval=2)
 
+BROADCASTER = {'latitude': 40.719569,
+               'longitude': -73.961105,
+               'name': 'swirly radio international'};
+
+IP_GEOCODE_URL = 'http://api.hostip.info/get_html.php?position=true&id='
+
 ADMIN = (ROOT_URL + 'admin/', 'admin', 'wombatwombat')
 MAX_TITLES = 200
 
