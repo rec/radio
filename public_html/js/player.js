@@ -80,7 +80,9 @@ function listenersArrived(request) {
   try {
     listeners = request.responseText.evalJSON();
     setListenerCount(listeners.listeners.length);
-    googleMap.addBroadcastMarker(listeners.broadcaster);
+    googleMap.addBroadcastMarker(listeners.broadcaster, true);
+    googleMap.addListenerMarkers(listeners.listeners);
+    googleMap.addBroadcastMarker(listeners.broadcaster, false);
   } catch(e) {}
   setTimeout("requestStatus()", fetchInterval);
 };
