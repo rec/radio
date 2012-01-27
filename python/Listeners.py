@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import datetime
 import operator
 import sys
 import traceback
@@ -11,7 +12,20 @@ import File
 import Geocode
 import Job
 
-def getRawListeners(data):
+EPOCH = datetime.datetime(year=2000, month=1, day=1)
+
+def makeListener(ip, connected, client):
+  conn = int(connected.strip())
+  now = datetime.datetime.now()
+  start = now - datetime.timedelta(seconds=conn)
+  since = start.strftime('%H:%M:%S' if start.day is now.day else '%A, %H:%M')
+  time = int((start - EPOCH).total_seconds())
+
+  geocode = Geocode.geocode(ip)
+
+  return dict(ip=ip, geocode=geocode, time=time, client=client, since=since)
+
+def getFromHTML(data):
   listeners = []
   if data:
     try:
@@ -20,25 +34,51 @@ def getRawListeners(data):
         try:
           def get(i):
             return c.contents[i].contents[0].extract()
-          listeners.append(dict(ip=get(1), time=get(3), client=get(5)))
+          listeners.append(dict(ip=get(1), connected=get(3), client=get(5)))
         except:
+          # traceback.print_exc(file=sys.stdout)
           pass
     except:
       print "Error in parsing: "
       traceback.print_exc(file=sys.stdout)
 
-  return sorted(listeners[1:], key=operator.itemgetter('time'))
+  listeners = [makeListener(**li) for li in listeners[1:]]
+  return sorted(listeners, key=operator.itemgetter('time'))
 
 
 class ListenerJob(Job.Job):
+  TIME_WINDOW = 5
+
   def __init__(self):
     Job.Job.__init__(self, Config.LISTENER)
     self.output = self.output or {}
+    self.index = 0
 
   def process(self, data):
-    return getRawListeners(data);
+    listeners = getFromHTML(data)
+    self.merge(listeners)
+    return {'listeners': listeners, 'broadcaster' : Config.BROADCASTER}
 
+  def merge(self, listeners):
+    oldListeners = self.output.get('listeners', [])[:]
+    for i, listener in enumerate(listeners):
+      time = int(listener['time'])
+      while oldListeners:
+        oldListener = oldListeners[0]
+        nextTime = int(oldListener['time'])
+        delta = nextTime - time
+        if delta < -ListenerJob.TIME_WINDOW:
+          oldListeners.pop()
 
-LISTENERS = {'broadcast' : Config.BROADCASTER,
-             'listeners' : {}};
+        elif delta > ListenerJob.TIME_WINDOW:
+          break
+
+        elif oldListener['ip'] == listener['ip']:
+          listeners[i] = oldListener
+          self.index = max(self.index, oldListener['index'] + 1)
+          break
+
+      if 'index' in listener:
+        listener['index'] = self.index
+        self.index += 1
 

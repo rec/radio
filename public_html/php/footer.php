@@ -5,9 +5,9 @@
         <?php MSG("broadcasting since") ?>
       </td>
 
-      <td style="float:right" align="right">
+      <td style="float:right" align="right" id="Copyright">
         <?php MSG("copyright") ?>
-        <a href="mailto:tom@swirly.com">Tom Swirly</a>.
+        <a href="mailto:tom@swirly.com" style="position:relative; top: -1px;" >Tom Swirly</a>
         <?php MSG("all rights reserved") ?>
       </td>
     </tr>
