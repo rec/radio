@@ -26,14 +26,45 @@ body {
   padding: 10px;
 }
 
+#SongTitleDiv {
+  color:#333;
+  line-height:20px;
+  padding:10px 0;
+  font-size: 14px;
+  font-weight:bold;
+  border:none;
+  background:none;
+  width: 100%;
+  border-bottom:1px dotted #CCC
+}
+
 #playerTop {
+  height: 312px;
   background:#F0F0F0;
   float:left;
   clear:left;
-  height:362px;
   text-align:left;
   font-family:Arial;
   width: 100%;
+}
+
+#SongHistory {
+  height: 207px;
+  left:20px;
+  padding:0px;
+  color:#666;
+  line-height:14px;
+  font-size:12px;
+  list-style:none;
+  margin-top:10px;
+  overflow:auto;
+}
+
+#map_canvas {
+  height: 320px;
+  width:100%;
+  position: relative;
+  top: 20px;
 }
 
 #player2 {
@@ -49,18 +80,6 @@ body {
   font-size:30px;
   text-align:center;
   margin-bottom:0px;
-}
-
-#SongTitleDiv {
-  color:#333;
-  line-height:20px;
-  padding:10px 0;
-  font-size:14px;
-  font-weight:bold;
-  border:none;
-  background:none;
-  width: 100%;
-  border-bottom:1px dotted #CCC
 }
 
 #ListenersDiv {
@@ -87,22 +106,11 @@ body {
 #LastPlayedSongs {
   float:left;
   margin-right:10px;
-}
-
-#SongHistory {
-  left:20px;
-  padding:0px;
-  color:#666;
-  line-height:14px;
-  font-size:12px;
-  list-style:none;
-  height:255px;
-  margin-top:10px;
-  overflow:auto;
+  width:100%;
 }
 
 #TitleTable{
-  width:100%;
+  width: 100%;
 }
 
 #footer {
@@ -124,14 +132,7 @@ body {
 
 #twitter {
   position: relative;
-  top: 10px;
-}
-
-#map_canvas {
-  width:100%;
-  height: 280px;
-  position: relative;
-  top: 20px;
+  top: 4px;
 }
 
 #tunelinks {

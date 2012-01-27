@@ -2,7 +2,7 @@ var x = 0;
 var scrollInterval = 150;
 var songTitle = '(no song)';
 var startPosition = 0;
-var scrollingRegion = 140;
+var scrollingRegion = 210;
 var songTitleDiv;
 var stationOnline;
 var innDiv;
