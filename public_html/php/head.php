@@ -23,8 +23,9 @@
   <script type="text/javascript" src="js/prototype.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript">jQuery.noConflict();</script>
-  <script type="text/javascript" src="js/player.js"></script>
   <script type="text/javascript"
 	        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAJbWgXo4oZxIhywn7tc-jftsPAEKHbchA&sensor=true"></script>
 
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
 </head>
