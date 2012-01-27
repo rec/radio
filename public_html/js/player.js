@@ -69,7 +69,7 @@ function statusArrived(request) {
 };
 
 function requestListeners() {
-  var url = "generated/listeners.json.saved";
+  var url = "generated/listeners.json";
   var myAjax = new Ajax.Request(url,
                                 {method: 'get',
                                  parameters: "",
@@ -79,7 +79,8 @@ function requestListeners() {
 function listenersArrived(request) {
   try {
     listeners = request.responseText.evalJSON();
-    setListenerCount(listeners.length);
+    setListenerCount(listeners.listeners.length);
+    googleMap.addBroadcastMarker(listeners.broadcaster);
   } catch(e) {}
   setTimeout("requestStatus()", fetchInterval);
 };

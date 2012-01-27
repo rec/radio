@@ -10,7 +10,6 @@ class Job(object):
   def __init__(self, desc):
     self.desc = desc
     data = File.readFile(self.dataFile()) or '{}'
-    print 'data:', data
     self.output = json.loads(data)
 
   def dataFile(self):

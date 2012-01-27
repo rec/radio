@@ -36,7 +36,6 @@ def getFromHTML(data):
             return c.contents[i].contents[0].extract()
           listeners.append(dict(ip=get(1), connected=get(3), client=get(5)))
         except:
-          # traceback.print_exc(file=sys.stdout)
           pass
     except:
       print "Error in parsing: "
@@ -78,7 +77,7 @@ class ListenerJob(Job.Job):
           self.index = max(self.index, oldListener['index'] + 1)
           break
 
-      if 'index' in listener:
+      if 'index' not in listener:
         listener['index'] = self.index
         self.index += 1
 
