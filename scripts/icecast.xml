@@ -5,7 +5,17 @@
 <icecast>
     <limits>
         <sources>2</sources>
-    </limits>
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>10</source-timeout>
+        <!-- If enabled, this will provide a burst of data when a client
+	     first connects, thereby significantly reducing the startup
+	     time for listeners that do substantial buffering. However,
+	     it also significantly increases latency between the source
+	     client and listening client.  For low-latency setups, you
+	     might want to disable this. -->
+        <burst-on-connect>1</burst-on-connect>
+      </limits>
     <authentication>
         <source-password>wombatwombat</source-password>
         <relay-password>wombatwombat</relay-password>

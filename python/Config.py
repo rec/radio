@@ -11,11 +11,11 @@ FILL = ' [...] '
 
 LISTENER = JobDesc(url='admin/listclients.xsl?mount=/radio',
                    filepath='listeners.json',
-                   interval=3)
+                   interval=1)
 
 STATUS = JobDesc(url='playerStatus.xsl',
                  filepath='status.json',
-                 interval=2)
+                 interval=1)
 
 BROADCASTER = {'latitude': 40.719569,
                'longitude': -73.961105,

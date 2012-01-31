@@ -1,7 +1,7 @@
 var x = 0;
 var scrollInterval = 150;
 var DEFAULT_TITLE = '               ...off the air...            ';
-var songTitle = DEFAULT_TITLE;
+var songTitle = '                                                   ';
 var startPosition = 0;
 var scrollingRegion = 300;
 var songTitleDiv;
@@ -64,7 +64,7 @@ function statusArrived(request) {
     data = request.responseText.evalJSON();
     songTitle = data.title || DEFAULT_TITLE;
     offTheAir = !data.title;
-    setListenerCount(data.listeners || 0);
+    // setListenerCount(data.listeners || 0);
     document.getElementById('SongHistory').innerHTML =
       makeScroller(data.titleList || []);
   } catch(e) {}

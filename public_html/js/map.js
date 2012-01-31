@@ -1,5 +1,5 @@
 var googleMap;
-var listenerFetchInterval = 1000;
+var listenerFetchInterval = 10000;
 
 function GoogleMap() {
   var swirlyRadio = new google.maps.LatLng(40.719569, -73.961105);
@@ -45,15 +45,18 @@ function GoogleMap() {
       newMarkers[listeners[i].index] = listeners[i];
 
     var newIndexes = {}, removedIndexes = {};
+    var j = 0, k = 0;
     for (var i in markers) {
       if (!newMarkers[i])
         removedIndexes[i] = markers[i];
         hasMarkers = true;
+	j++;
     }
     for (var i in newMarkers) {
       if (!markers[i]) {
         newIndexes[i] = newMarkers[i];
         hasMarkers = true;
+	k++;
       }
     }
 
@@ -80,6 +83,7 @@ function GoogleMap() {
 function listenersArrived(request) {
   try {
     listeners = request.responseText.evalJSON();
+    // alert('listeners! ' + listeners.listeners.length);
     setListenerCount(listeners.listeners.length);
     if (listeners.broadcaster) {
       googleMap.addBroadcastMarker(listeners.broadcaster);
