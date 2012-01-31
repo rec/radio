@@ -1,12 +1,14 @@
 var x = 0;
 var scrollInterval = 150;
-var songTitle = '(no song)';
+var DEFAULT_TITLE = '               ...off the air...            ';
+var songTitle = DEFAULT_TITLE;
 var startPosition = 0;
-var scrollingRegion = 210;
+var scrollingRegion = 300;
 var songTitleDiv;
 var stationOnline;
 var innDiv;
-var fetchInterval = 1000;
+var offTheAir = true;
+var statusFetchInterval = 1000;
 
 var parts = [
     '<li class="lines"' +
@@ -60,31 +62,13 @@ function setListenerCount(listeners) {
 function statusArrived(request) {
   try {
     data = request.responseText.evalJSON();
-    songTitle = data.title || '(no song)';
+    songTitle = data.title || DEFAULT_TITLE;
+    offTheAir = !data.title;
     setListenerCount(data.listeners || 0);
     document.getElementById('SongHistory').innerHTML =
       makeScroller(data.titleList || []);
   } catch(e) {}
-  setTimeout("requestStatus()", fetchInterval);
-};
-
-function requestListeners() {
-  var url = "generated/listeners.json";
-  var myAjax = new Ajax.Request(url,
-                                {method: 'get',
-                                 parameters: "",
-                                 onComplete: listenersArrived});
-};
-
-function listenersArrived(request) {
-  try {
-    listeners = request.responseText.evalJSON();
-    setListenerCount(listeners.listeners.length);
-    googleMap.addBroadcastMarker(listeners.broadcaster, true);
-    googleMap.addListenerMarkers(listeners.listeners);
-    googleMap.addBroadcastMarker(listeners.broadcaster, false);
-  } catch(e) {}
-  setTimeout("requestStatus()", fetchInterval);
+  setTimeout("requestStatus()", statusFetchInterval);
 };
 
 function songTitleScroller() {
@@ -98,18 +82,17 @@ function songTitleScroller() {
   var s = mainMessage.substring(startPosition,
 				startPosition + scrollingRegion);
   document.getElementById('SongTitleDiv').value = s;
-  startPosition++;
 
+  startPosition++;
   if (startPosition > scrollingRegion)
     startPosition = 0;
 
-  setTimeout("songTitleScroller()", scrollInterval);
+  setTimeout("songTitleScroller()", (offTheAir ? 4 : 1) *scrollInterval);
 }
 
 jQuery(document).ready(
   function() {
     songTitleScroller();
     requestStatus();
-    requestListeners();
   }
 );

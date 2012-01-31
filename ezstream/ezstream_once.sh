@@ -2,9 +2,13 @@
 
 EZSTREAM=/usr/local/bin/ezstream
 
-HOME=/home/radio/radio
-FILE_PATH=$HOME/audio/0
-EZSTREAM_SCRIPT=$HOME/ezstream/ezstream.xml
-EZSTREAM_RESULT=$HOME/ezstream/ezstream_files.txt
+FILE_PATH=/home/radio/audio
+HOME=/home/radio/radio/ezstream
+EZSTREAM_SCRIPT=$HOME/ezstream.xml
+EZSTREAM_RESULT=$HOME/ezstream_files.txt
+LOG_FILE=/home/radio/logs/ezstream/`date +%Y-%m-%d-%H-%M`.log
 
-find $FILE_PATH -name \*.mp3 \! -type l | $EZSTREAM -vvc $EZSTREAM_SCRIPT
+find $FILE_PATH -name \*.mp3 \! -type l > /home/radio/radio/ezstream/ezstream_files.txt
+$EZSTREAM -vvc $EZSTREAM_SCRIPT
+
+# )  2>&1 > $LOG_FILE

@@ -1,4 +1,5 @@
 var googleMap;
+var listenerFetchInterval = 1000;
 
 function GoogleMap() {
   var swirlyRadio = new google.maps.LatLng(40.719569, -73.961105);
@@ -10,18 +11,29 @@ function GoogleMap() {
 
   var broadcastMarker = null;
 
-  this.addBroadcastMarker = function(marker, bounce) {
-    if (broadcastMarker)
+  this.removeBroadcastMarker = function() {
+    if (broadcastMarker) {
       broadcastMarker.setMap(null);
-    var position = new google.maps.LatLng(marker.latitude, marker.longitude);
-    broadcastMarker = new google.maps.Marker({
-        position: position,
-        animation: (bounce ? google.maps.Animation.BOUNCE :
-                    google.maps.Animation.DROP),
-        map: map,
-        icon: 'images/ensoo-tiny.gif',
-        shadow: 'images/ensoo-shadow-tiny.gif',
-        title: marker.title});
+      broadcastMarker = null;
+    }
+  };
+
+  this.addBroadcastMarker = function(marker) {
+    if (!broadcastMarker) {
+      var position = new google.maps.LatLng(marker.latitude, marker.longitude);
+      broadcastMarker = new google.maps.Marker({
+          position: position,
+          animation: google.maps.Animation.DROP,
+          map: map,
+          icon: 'images/ensoo-tiny.gif',
+          shadow: 'images/ensoo-shadow-tiny.gif',
+          title: marker.title});
+    }
+  };
+
+  this.setBroadcastMarkerAnimation = function(run) {
+    if (broadcastMarker)
+      broadcastMarker.setAnimation(run ? google.maps.Animation.BOUNCE : null);
   };
 
   var markers = {};
@@ -65,4 +77,32 @@ function GoogleMap() {
   };
 };
 
-jQuery(document).ready(function() { googleMap = new GoogleMap(); } );
+function listenersArrived(request) {
+  try {
+    listeners = request.responseText.evalJSON();
+    setListenerCount(listeners.listeners.length);
+    if (listeners.broadcaster) {
+      googleMap.addBroadcastMarker(listeners.broadcaster);
+      googleMap.addListenerMarkers(listeners.listeners);
+    } else {
+      googleMap.removeBroadcastMarker();
+      googleMap.addListenerMarkers([]);
+    }
+  } catch(e) {}
+  setTimeout("requestListeners()", listenerFetchInterval);
+};
+
+function requestListeners() {
+  var url = "generated/listeners.json";
+  var myAjax = new Ajax.Request(url,
+                                {method: 'get',
+                                 parameters: "",
+                                 onComplete: listenersArrived});
+};
+
+function startMaps() {
+  googleMap = new GoogleMap();
+  requestListeners();
+};
+
+jQuery(document).ready(startMaps);

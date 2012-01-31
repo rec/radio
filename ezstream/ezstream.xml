@@ -1,7 +1,7 @@
 <ezstream>
     <url>http://radio.swirly.com:8000/radio</url>
 
-    <filename>/home/radio/radio/ezstream/ezstream_files.txt</filename>
+    <filename>/home/radio/radio/ezstream/ezstream_files.txt</filename> 
     <sourcepassword>wombatwombat</sourcepassword>
 
     <stream_once>0</stream_once>

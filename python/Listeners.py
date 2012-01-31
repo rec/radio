@@ -26,20 +26,23 @@ def makeListener(ip, connected, client):
   return dict(ip=ip, geocode=geocode, time=time, client=client, since=since)
 
 def getFromHTML(data):
+  if not data:
+    return None
+
   listeners = []
-  if data:
-    try:
-      contents = BeautifulSoup.BeautifulSoup(data).find(id='listenerTable')
-      for c in contents:
-        try:
-          def get(i):
-            return c.contents[i].contents[0].extract()
-          listeners.append(dict(ip=get(1), connected=get(3), client=get(5)))
-        except:
-          pass
-    except:
-      print "Error in parsing: "
-      traceback.print_exc(file=sys.stdout)
+  try:
+    contents = BeautifulSoup.BeautifulSoup(data).find(id='listenerTable')
+    for c in contents:
+      try:
+        def get(i):
+          return c.contents[i].contents[0].extract()
+        listeners.append(dict(ip=get(1), connected=get(3), client=get(5)))
+      except:
+        pass
+  except:
+    print "Error in parsing: "
+    traceback.print_exc(file=sys.stdout)
+    return None
 
   listeners = [makeListener(**li) for li in listeners[1:]]
   return sorted(listeners, key=operator.itemgetter('time'))
@@ -55,6 +58,9 @@ class ListenerJob(Job.Job):
 
   def process(self, data):
     listeners = getFromHTML(data)
+    if listeners is None:
+      return {'listeners': []}
+
     self.merge(listeners)
     return {'listeners': listeners, 'broadcaster' : Config.BROADCASTER}
 

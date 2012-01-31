@@ -24,22 +24,26 @@ JSON_FIELDS = {
   'bitrate': '128',
   'error': ''}
 
+
+def getRawStatusRecords(data, status):
+  dom = xml.dom.minidom.parseString(data)
+  item = dom.getElementsByTagName('item')[0]
+
+  for child in item.childNodes:
+    name = child.tagName
+    if child.childNodes:
+      text = child.childNodes[0].wholeText
+      if name == 'title' and text:
+        text = FixText.fixTitle(text)
+      status[name] = text
+
 def getStatusRecord(data):
   status = {}
-  try:
-    dom = xml.dom.minidom.parseString(data)
-    item = dom.getElementsByTagName('item')[0]
-
-    for child in item.childNodes:
-      name = child.tagName
-      if child.childNodes:
-        text = child.childNodes[0].wholeText
-        if name == 'title' and text:
-          text = FixText.fixTitle(text)
-        status[name] = text
-
-  except:
-    traceback.print_exc(file=sys.stdout)
+  if data:
+    try:
+      getRawStatusRecords(data, status)
+    except:
+      traceback.print_exc(file=sys.stdout)
 
   return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
 
@@ -64,14 +68,15 @@ class StatusJob(Job.Job):
     if title == getTitle(self.output):
       return self.output
 
+    titleList = self.output.get('titleList', [])
     if title:
-      titleList = self.output.get('titleList', [])
       index = (1 + titleList[0]['index']) if titleList else 0
       time = time=datetime.datetime.now().strftime('%H:%M')
       titleList.insert(0, {'index': index, 'title': title, 'time': time})
       while len(titleList) > Config.MAX_TITLES:
         titleList.pop()
-      output['titleList'] = titleList
+
+    output['titleList'] = titleList
     return output
 
   def onOutputChanged(self, output):
