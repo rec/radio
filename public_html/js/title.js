@@ -5,11 +5,10 @@ var MISSING_TITLE = '                                                   ';
 var songTitle = MISSING_TITLE;
 var startPosition = 0;
 var scrollingRegion = 300;
-var offTheAir = true;
-var titleFetchInterval = 3000;
 
 function songTitleScroller() {
-  var mainMessage = songTitle ? (songTitle + "...         ") : OFF_THE_AIR;
+  var offTheAir = !songTitle;
+  var mainMessage = offTheAir ? OFF_THE_AIR : (songTitle + "...         ");
   var tempLoc = Math.max((scrollingRegion * 3 / mainMessage.length) + 1, 1);
   var m = mainMessage;
 
@@ -28,9 +27,7 @@ function songTitleScroller() {
 }
 
 function start() {
-  alert('start!');
   new Repeater('title', 1000, function(response) {
-      alert('title!');
       if (response.title != songTitle)
         songTitle = response.title;
   });
