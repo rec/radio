@@ -36,7 +36,7 @@ function unbounceBroadcaster() {
 };
 
 function startMaps() {
-  googleMap = new GoogleMap();
+  googleMap = new GoogleMap('map_canvas');
   requestListeners();
   setTimeout("bounceBroadcaster()", 1000);
 };

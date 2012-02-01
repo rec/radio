@@ -1,29 +1,13 @@
 var googleMap;
-var listenerFetchInterval = 10000;
 
-
-function listenersArrived(request) {
-  try {
-    listeners = request.responseText.evalJSON();
-    // alert('listeners! ' + listeners.listeners.length);
-    setListenerCount(listeners.listeners.length);
-    if (listeners.broadcaster) {
-      googleMap.addBroadcastMarker(listeners.broadcaster);
-      googleMap.addListenerMarkers(listeners.listeners);
-    } else {
-      googleMap.removeBroadcastMarker();
-      googleMap.addListenerMarkers([]);
-    }
-  } catch(e) {}
-  setTimeout("requestListeners()", listenerFetchInterval);
-};
-
-function requestListeners() {
-  var url = 'generated/listeners.json?no-cache=' + (++requestIndex);
-  var myAjax = new Ajax.Request(url,
-                                {method: 'get',
-                                 parameters: "",
-                                 onComplete: listenersArrived});
+function listenersArrived(listeners) {
+  if (listeners.broadcaster) {
+    googleMap.addBroadcastMarker(listeners.broadcaster);
+    googleMap.addListenerMarkers(listeners.listeners);
+  } else {
+    googleMap.removeBroadcastMarker();
+    googleMap.addListenerMarkers([]);
+  }
 };
 
 function bounceBroadcaster() {
@@ -39,8 +23,9 @@ function unbounceBroadcaster() {
 
 function startMaps() {
   googleMap = new GoogleMap();
-  requestListeners();
-  setTimeout("bounceBroadcaster()", 1000);
+  new Repeater('generated/listeners.json', listenersArrived, 10000);
+
+  setTimeout(bounceBroadcaster, 1000);
 };
 
 jQuery(document).ready(startMaps);
