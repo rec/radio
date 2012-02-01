@@ -23,7 +23,7 @@ function unbounceBroadcaster() {
 
 function startMaps() {
   googleMap = new GoogleMap();
-  new Repeater('listeners', listenersArrived, 10000);
+  new Repeater('listeners', 10000, listenersArrived);
 
   setTimeout(bounceBroadcaster, 1000);
 };
