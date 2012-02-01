@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 
 import datetime
 import json
@@ -16,36 +16,44 @@ import Job
 import Secret
 
 JSON_FIELDS = {
-  'online': '0',
   'title': '',
   'titleList': [],
   'listeners': '0',
   'unique': '0',
-  'bitrate': '128',
-  'error': ''}
+  'bitrate': '128'}
 
+RUNNING = 'running'
+NOT_RUNNING = 'not running'
+NO_STREAM = 'no stream'
 
 def getRawStatusRecords(data, status):
+  if not data:
+    return NOT_RUNNING
+  
   dom = xml.dom.minidom.parseString(data)
-  item = dom.getElementsByTagName('item')[0]
+  items = dom.getElementsByTagName('item')
+  if not items:
+    return NO_STREAM
+
+  item = items[0]
 
   for child in item.childNodes:
     name = child.tagName
     if child.childNodes:
       text = child.childNodes[0].wholeText
       if name == 'title' and text:
-        text = FixText.fixTitle(text)
+        text = FixText.swapParts(text)
       status[name] = text
 
-def getStatusRecord(data):
-  status = {}
-  if data:
-    try:
-      getRawStatusRecords(data, status)
-    except:
-      traceback.print_exc(file=sys.stdout)
+  return ''
 
-  return dict((k, status.get(k, d)) for k, d in JSON_FIELDS.iteritems())
+def getStatusRecord(data):
+  statusRecord = {}
+  error = getRawStatusRecords(data, statusRecord)
+  if error:
+    return dict(error=error)
+  else:
+    return dict((k, statusRecord.get(k, d)) for k, d in JSON_FIELDS.iteritems())
 
 
 class StatusJob(Job.Job):
@@ -80,7 +88,8 @@ class StatusJob(Job.Job):
     return output
 
   def onOutputChanged(self, output):
-    if Config.POST_TO_TWITTER and output and output.title:
-      if not self.output or (self.output.get('title', None) != output.title):
-        StatusJob.API.PostUpdate(output.title)
+    if Config.POST_TO_TWITTER and output:
+      t = output.get('title', None)
+      if t and (not self.output or (self.output.get('title', None) != t)):
+        StatusJob.API.PostUpdate(FixText.fitToSize(t))
     Job.Job.onOutputChanged(self, output)

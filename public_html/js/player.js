@@ -1,7 +1,8 @@
 var x = 0;
 var scrollInterval = 150;
-var DEFAULT_TITLE = '               ...off the air...            ';
-var songTitle = '                                                   ';
+var OFF_THE_AIR = '               ...off the air...            ';
+var MISSING_TITLE = '                                                   ';
+var songTitle = MISSING_TITLE;
 var startPosition = 0;
 var scrollingRegion = 300;
 var songTitleDiv;
@@ -47,7 +48,7 @@ function makeScroller(titleList) {
 };
 
 function requestStatus() {
-  var url = "generated/status.json";
+  var url = 'generated/status.json?no-cache=';// + (++requestIndex);;
   var myAjax = new Ajax.Request(url,
                                 {method: 'get',
                                  parameters: "",
@@ -62,8 +63,12 @@ function setListenerCount(listeners) {
 function statusArrived(request) {
   try {
     data = request.responseText.evalJSON();
-    songTitle = data.title || DEFAULT_TITLE;
-    offTheAir = !data.title;
+    songTitle = data.title;
+    offTheAir = !!data.error;
+    if (offTheAir) 
+      songTitle = OFF_THE_AIR;
+    else if (!songTitle)
+      songTitle = MISSING_TITLE;
     // setListenerCount(data.listeners || 0);
     document.getElementById('SongHistory').innerHTML =
       makeScroller(data.titleList || []);

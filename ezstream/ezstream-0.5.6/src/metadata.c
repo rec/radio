@@ -132,9 +132,10 @@ metadata_use_taglib(metadata_t *md, FILE **filep)
 	if (str != NULL) {
     str2 = taglib_tag_album(tt);
     if (str2 != NULL) {
+      const char* p;
       len = strlen(str) + strlen(str2) + 4;
       md->artist = xmalloc(len);
-      snprintf(md->artist, len, "%s - %s", str, str2);
+      snprintf(md->artist, len, "%s - %s\n", str, str2);
       free(str2);
     } else {
       if (strlen(str) > 0)

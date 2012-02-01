@@ -1,5 +1,6 @@
 var googleMap;
 var listenerFetchInterval = 10000;
+var requestIndex = 0;
 
 function GoogleMap() {
   var swirlyRadio = new google.maps.LatLng(40.719569, -73.961105);
@@ -97,7 +98,7 @@ function listenersArrived(request) {
 };
 
 function requestListeners() {
-  var url = "generated/listeners.json";
+  var url = 'generated/listeners.json';//?no-cache=' + (++requestIndex);
   var myAjax = new Ajax.Request(url,
                                 {method: 'get',
                                  parameters: "",

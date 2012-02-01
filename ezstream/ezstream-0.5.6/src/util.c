@@ -225,6 +225,23 @@ stream_setup(const char *host, unsigned short port, const char *mount)
 	return (shout);
 }
 
+#define DISABLE_CONVERSIONS
+
+#ifdef DISABLE_CONVERSIONS
+char *
+CHARtoUTF8(const char *in_str, int mode) {
+  printf("Didn't CHARtoUTF8 %s\n", in_str);
+  return xstrdup(in_str);
+}
+
+char *
+UTF8toCHAR(const char *in_str, int mode) {
+  printf("Didn't UTF8toCHAR %s\n", in_str);
+  return xstrdup(in_str);
+}
+
+#else
+
 char *
 CHARtoUTF8(const char *in_str, int mode)
 {
@@ -268,6 +285,8 @@ UTF8toCHAR(const char *in_str, int mode)
 
 	return (iconvert(in_str, "UTF-8", codeset, mode));
 }
+
+#endif
 
 char *
 iconvert(const char *in_str, const char *from, const char *to, int mode)

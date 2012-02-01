@@ -31,6 +31,11 @@
         <port>8000</port>
     </listen-socket>
     <fileserve>1</fileserve>
+    <mount>
+      <mount-name>/radio</mount-name>
+      <charset>UTF-8</charset>
+    </mount>
+    
 
     <paths>
         <logdir>/home/radio/logs/icecast</logdir>

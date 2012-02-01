@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 
 FILL = ' [...] '
 
@@ -21,15 +21,14 @@ def swapParts(song):
   else:
     return '"%s" - %s (%s)' % (parts[2], parts[1], parts[0])
 
-def fitToSize(line, length = 140):
+def fitToSize(line, length=140):
   n = len(line)
   if n <= length:
     return line
 
   before = (n - len(FILL)) / 2
   after = length - (before + len(FILL))
-  return line[0 : before] + FILL + line[after : ]
-
+  return line[0 : before] + FILL + line[-after : ]
 
 def fixHTML(s):
   return (s.replace('&', '&amp;').
@@ -37,7 +36,4 @@ def fixHTML(s):
           replace('>', '&gt;').
           replace('"', '&quot;').
           replace("'", '&#39;'))
-
-def fixTitle(title):
-  return fitToSize(swapParts(title))
 

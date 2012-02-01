@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 
 import collections
 
@@ -27,7 +27,7 @@ ADMIN = (ROOT_URL + 'admin/', 'admin', 'wombatwombat')
 MAX_TITLES = 200
 
 
-POST_TO_TWITTER = not True
+POST_TO_TWITTER = True
 LOGGING_ENABLED = not True
 
 def log(msg):
