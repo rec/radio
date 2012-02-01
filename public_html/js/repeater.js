@@ -1,17 +1,20 @@
 // Call the same function repeatedly using a timeout.
 
-function Repeater(url, updatePeriod, callback, cached) {
-  var index = 0, localCcallback;
-  this.updatePeriod = updatePeriod || 1000;
-  url = 'generated/' + url + '.json';
+var requestIndex = 0;
 
-  function doRequest() {
-    var newUrl = url + (cached ? '' : ('?no-cache=' + (++index)));
-    new Ajax.Request(newUrl,
-		     {method: 'get',
-		      parameters: '',
-		      onComplete: localCallback});
-  };
+function requestUrl(url, callback, cached) {
+  url = 'generated/' + url + '.json';
+  url += (cached ? '' : ('?no-cache=' + (++requestIndex)));
+  new Ajax.Request(url,
+       {method: 'get',
+        parameters: '',
+        onComplete: callback});
+};
+
+
+function Repeater(url, updatePeriod, callback, cached) {
+  var localCallback;
+  this.updatePeriod = updatePeriod || 1000;
 
   localCallback = function(request) {
     try {
@@ -20,5 +23,5 @@ function Repeater(url, updatePeriod, callback, cached) {
     setTimeout(doRequest, updatePeriod);
   };
 
-  doRequest();
+  requestUrl(url, localCallback);
 };

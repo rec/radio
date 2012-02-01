@@ -27,11 +27,11 @@ function songTitleScroller() {
 }
 
 function start() {
-  new Repeater('title', 1000, function(response) {
+  new Repeater('title', 3000, function(response) {
       if (response.title != songTitle)
         songTitle = response.title;
   });
-  new Repeater('listenerCount', 1000, function(response) {
+  new Repeater('listenerCount', 5000, function(response) {
       var listeners = response.listeners || 0;
       document.getElementById('CurrListeners').innerHTML = listeners +
         (' listener' + ((listeners == 1) ? '' : 's') + ' online.');
