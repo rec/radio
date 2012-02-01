@@ -91,5 +91,7 @@ class StatusJob(Job.Job):
     if Config.POST_TO_TWITTER and output:
       t = output.get('title', None)
       if t and (not self.output or (self.output.get('title', None) != t)):
+        File.replaceAtomic(Config.STATUS_TITLE_FILE, json.dumps({'title': t}))
         StatusJob.API.PostUpdate(FixText.fitToSize(t))
+
     Job.Job.onOutputChanged(self, output)

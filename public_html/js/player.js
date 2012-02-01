@@ -9,7 +9,16 @@ var songTitleDiv;
 var stationOnline;
 var innDiv;
 var offTheAir = true;
-var statusFetchInterval = 1000;
+var titleFetchInterval = 1000;
+
+var requestIndex = 0;
+
+function requestAjax(url, callback) {
+   new Ajax.Request(url + '?bogus=' + (++requestIndex),
+		    {method: 'get',
+		     parameters: "",
+		     onComplete: callback});
+};
 
 var parts = [
     '<li class="lines"' +
@@ -47,14 +56,6 @@ function makeScroller(titleList) {
   return scroller.join('\n');
 };
 
-function requestStatus() {
-  var url = 'generated/status.json?no-cache=';// + (++requestIndex);;
-  var myAjax = new Ajax.Request(url,
-                                {method: 'get',
-                                 parameters: "",
-                                 onComplete: statusArrived});
-};
-
 function setListenerCount(listeners) {
   document.getElementById('CurrListeners').innerHTML = listeners +
     (' listener' + ((listeners == 1) ? '' : 's') + ' online.');
@@ -63,17 +64,15 @@ function setListenerCount(listeners) {
 function statusArrived(request) {
   try {
     data = request.responseText.evalJSON();
-    songTitle = data.title;
+    // songTitle = data.title;
     offTheAir = !!data.error;
     if (offTheAir) 
       songTitle = OFF_THE_AIR;
     else if (!songTitle)
       songTitle = MISSING_TITLE;
-    // setListenerCount(data.listeners || 0);
     document.getElementById('SongHistory').innerHTML =
       makeScroller(data.titleList || []);
   } catch(e) {}
-  setTimeout("requestStatus()", statusFetchInterval);
 };
 
 function songTitleScroller() {
@@ -95,9 +94,29 @@ function songTitleScroller() {
   setTimeout("songTitleScroller()", (offTheAir ? 4 : 1) *scrollInterval);
 }
 
+function requestStatus() {
+  requestAjax('generated/status.json', statusArrived);
+};
+
+function requestTitle() {
+  requestAjax('generated/title.json', titleArrived);
+};
+
+function titleArrived(request) {
+  try {
+    var title = request.responseText.evalJSON().title;
+    if (title != songTitle) {
+      songTitle = title;
+      requestStatus();
+    }
+  } catch (e) {}
+  setTimeout("requestTitle()", titleFetchInterval);
+};
+
 jQuery(document).ready(
   function() {
     songTitleScroller();
+    requestTitle();
     requestStatus();
   }
 );
