@@ -1,0 +1,22 @@
+<ezstream>
+    <url>http://radio.swirly.com:8000/radio</url>
+
+    <filename>/home/radio/radio/ezstream/ezstream_files-test.txt</filename> 
+    <sourcepassword>wombatwombat</sourcepassword>
+
+    <stream_once>0</stream_once>
+    <shuffle>1</shuffle>
+
+    <format>MP3</format>
+    <svrinfobitrate>128</svrinfobitrate>
+    <svrinfochannels>2</svrinfochannels>
+    <svrinfosamplerate>44100</svrinfosamplerate>
+
+
+    <svrinfoname>radio swirly international</svrinfoname>
+    <svrinfourl>http://radio.swirly.com</svrinfourl>
+    <svrinfogenre>Eclectic</svrinfogenre>
+    <svrinfodescription>eclectic radio for an apocalyptic world</svrinfodescription>
+
+    <svrinfopublic>1</svrinfopublic>
+</ezstream>
