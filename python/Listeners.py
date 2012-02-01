@@ -59,6 +59,8 @@ class ListenerJob(Job.Job):
   def process(self, data):
     listeners = getFromHTML(data)
     if listeners is None:
+      print 'NONE!'
+      print data
       return {'listeners': []}
 
     self.merge(listeners)

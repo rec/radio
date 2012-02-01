@@ -92,6 +92,9 @@ class StatusJob(Job.Job):
       t = output.get('title', None)
       if t and (not self.output or (self.output.get('title', None) != t)):
         File.replaceAtomic(Config.STATUS_TITLE_FILE, json.dumps({'title': t}))
-        StatusJob.API.PostUpdate(FixText.fitToSize(t))
+        try:
+          StatusJob.API.PostUpdate(FixText.fitToSize(t))
+        except:
+          traceback.print_exc(file=sys.stdout)
 
     Job.Job.onOutputChanged(self, output)

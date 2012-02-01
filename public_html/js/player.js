@@ -9,7 +9,7 @@ var songTitleDiv;
 var stationOnline;
 var innDiv;
 var offTheAir = true;
-var titleFetchInterval = 1000;
+var titleFetchInterval = 3000;
 
 var requestIndex = 0;
 

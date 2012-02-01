@@ -15,11 +15,18 @@ def makeOpener():
 
 OPENER = makeOpener()
 
+_index =  0
+
 def readUrl(url):
   try:
+    global _index
+    _index += 1
+    sep = '&' if '?' in url else '?'
+    url = '%s%s%d' % (url, sep, _index)
+    print url
     return OPENER.open(url).read()
   except:
-    Config.log("Couldn't open URL" + url)
+    print("Couldn't open URL" + url)
     return None
 
 def replaceAtomic(filename, value):
