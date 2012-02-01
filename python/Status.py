@@ -29,7 +29,7 @@ NO_STREAM = 'no stream'
 def getRawStatusRecords(data, status):
   if not data:
     return NOT_RUNNING
-  
+
   dom = xml.dom.minidom.parseString(data)
   items = dom.getElementsByTagName('item')
   if not items:
@@ -89,12 +89,12 @@ class StatusJob(Job.Job):
 
   def onOutputChanged(self, output):
     if Config.POST_TO_TWITTER and output:
-      t = output.get('title', None)
-      if t and (not self.output or (self.output.get('title', None) != t)):
-        File.replaceAtomic(Config.STATUS_TITLE_FILE, json.dumps({'title': t}))
-        try:
+      try:
+        t = output.get('title', None)
+        if t and (not self.output or (self.output.get('title', None) != t)):
+          File.replaceJson(Config.STATUS_TITLE_FILE, title=t)
           StatusJob.API.PostUpdate(FixText.fitToSize(t))
-        except:
-          traceback.print_exc(file=sys.stdout)
+      except:
+        traceback.print_exc(file=sys.stdout)
 
     Job.Job.onOutputChanged(self, output)

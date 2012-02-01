@@ -18,6 +18,7 @@ STATUS = JobDesc(url='playerStatus.xsl',
                  interval=1)
 
 STATUS_TITLE_FILE = GENERATED_FILES + 'title.json'
+LISTENER_COUNT_FILE = GENERATED_FILES + 'listenerCount.json'
 
 BROADCASTER = {'latitude': 40.719569,
                'longitude': -73.961105,

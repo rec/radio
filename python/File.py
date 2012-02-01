@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 
+import json
 import os
 import sys
 import traceback
@@ -23,7 +24,6 @@ def readUrl(url):
     _index += 1
     sep = '&' if '?' in url else '?'
     url = '%s%s%d' % (url, sep, _index)
-    print url
     return OPENER.open(url).read()
   except:
     print("Couldn't open URL" + url)
@@ -49,6 +49,10 @@ def replaceAtomic(filename, value):
   except:
     print "Couldn't rename", tmpname, "to", filename
     return False
+
+def replaceJson(filename, **args):
+  return replaceAtomic(filename, json.dumps(args))
+
 
 def readFile(f):
   try:

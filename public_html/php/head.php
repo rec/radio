@@ -28,6 +28,9 @@
 
   <script type="text/javascript" src="js/ajax.js"></script>
   <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/swfplayer.js"></script>
+  <script type="text/javascript" src="js/swfobject.js"></script>
   <script type="text/javascript" src="js/googleMap.js"></script>
   <script type="text/javascript" src="js/map.js"></script>
+
 </head>

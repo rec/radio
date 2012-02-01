@@ -59,8 +59,6 @@ class ListenerJob(Job.Job):
   def process(self, data):
     listeners = getFromHTML(data)
     if listeners is None:
-      print 'NONE!'
-      print data
       return {'listeners': []}
 
     self.merge(listeners)
@@ -88,4 +86,13 @@ class ListenerJob(Job.Job):
       if 'index' not in listener:
         listener['index'] = self.index
         self.index += 1
+
+  def onOutputChanged(self, output):
+    Job.Job.onOutputChanged(self, output)
+    listeners = 0
+    try:
+      listeners = len(self.output['listeners'])
+    except:
+      pass
+    File.replaceJson(Config.LISTENER_COUNT_FILE, listeners=listeners)
 

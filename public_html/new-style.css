@@ -10,3 +10,41 @@
   width:100%;
   position: relative;
 }
+
+#Title {
+  padding:6px;
+  float:left;
+  clear:left;
+  width: 100%;
+  background: #F0F0F0
+}
+
+#TitleTable{
+  width: 100%;
+}
+
+#MainTitle {
+  color:#AF7B00;
+  font-weight:bold;
+  font-size:30px;
+  text-align:center;
+  margin-bottom:0px;
+}
+
+#ListenersDiv {
+  color:#666;
+  line-height:14px;
+  font-size: 16px;
+}
+
+#SongTitleDiv {
+  color:#333;
+  line-height:20px;
+  padding:10px 0;
+  font-size: 14px;
+  font-weight:bold;
+  border:none;
+  background:none;
+  width: 100%;
+  border-bottom:1px dotted #CCC
+}
