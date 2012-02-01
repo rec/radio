@@ -1,0 +1,1238 @@
+-*- mode: compilation; default-directory: "~/radio/public_html/generated/" -*-
+Compilation started at Mon Jan 30 22:08:27
+
+~/radio/ezstream/ezstream_once.sh
+ezstream: Warning: /home/radio/radio/ezstream/ezstream.xml is group and/or world readable
+ezstream: Connected to http://radio.swirly.com:8000/radio
+metadata_file_update
+artist: Terry Riley, (null)
+title: Chorale of the Blessed Day
+metadata_file_update
+artist: Terry Riley, (null)
+title: Chorale of the Blessed Day
+ezstream: Streaming ``Terry Riley - Songs for the Ten Voices of the Two Prophets - Chorale of the Blessed Day'' (file: /home/radio/audio/3/03 Chorale of the Blessed Day.mp3)
+ezstream: shout_send(): Socket error
+ezstream: Connection to http://radio.swirly.com:8000/radio lost
+ezstream: Attempting reconnection #1: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #2: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #3: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #4: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #5: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #6: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #7: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #8: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #9: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #10: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #11: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #12: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #13: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #14: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #15: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #16: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #17: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #18: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #19: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #20: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #21: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #22: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #23: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #24: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #25: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #26: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #27: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #28: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #29: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #30: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #31: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #32: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #33: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #34: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #35: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #36: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #37: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #38: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #39: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #40: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #41: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #42: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #43: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #44: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #45: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #46: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #47: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #48: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #49: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #50: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #51: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #52: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #53: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #54: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #55: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #56: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #57: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #58: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #59: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #60: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #61: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #62: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #63: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #64: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #65: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #66: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #67: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #68: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #69: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #70: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #71: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #72: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #73: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #74: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #75: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #76: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #77: OK
+ezstream: Reconnect to http://radio.swirly.com:8000/radio successful
+metadata_file_update
+artist: Hawkwind, (null)
+title: Quark, Strangeness & Charm / Uncle Sam's On Mars (The Rockfield Studio Session Tapes - Previously Unreleased)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Quark, Strangeness & Charm / Uncle Sam's On Mars (The Rockfield Studio Session Tapes - Previously Unreleased)
+ezstream: Streaming ``Hawkwind - Quark, Strangeness And Charm - Quark, Strangeness & Charm / Uncle Sam's On Mars (The Rockfield Studio Session Tapes - Previously Unreleased)'' (file: /home/radio/audio/5/2-04 Quark, Strangeness & Charm _ Uncle Sam's On Mars (The Rockfield Studio Session Tapes - Previously Unreleased).mp3)
+metadata_file_update
+artist: Frank Zappa, (null)
+title: Hog Heaven
+metadata_file_update
+artist: Frank Zappa, (null)
+title: Hog Heaven
+ezstream: Streaming ``Frank Zappa - Shut Up 'n Play Yer Guitar (disc 1) - Hog Heaven'' (file: /home/radio/audio/3/1-02 Hog Heaven.mp3)
+metadata_file_update
+artist: Faust, (null)
+title: Spiel
+metadata_file_update
+artist: Faust, (null)
+title: Spiel
+ezstream: Streaming ``Faust - Ravvivando - Spiel'' (file: /home/radio/audio/4/06 Spiel.mp3)
+metadata_file_update
+artist: King Crimson, (null)
+title: Fracture
+metadata_file_update
+artist: King Crimson, (null)
+title: Fracture
+ezstream: Streaming ``King Crimson - The Nightwatch: Live at the Amsterdam Concertgebouw November 23rd 1973 (disc 1) - Fracture'' (file: /home/radio/audio/2/1-04 Fracture.mp3)
+ezstream: shout_send(): Socket error
+ezstream: Connection to http://radio.swirly.com:8000/radio lost
+ezstream: Attempting reconnection #1: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #2: OK
+ezstream: Reconnect to http://radio.swirly.com:8000/radio successful
+metadata_file_update
+artist: Duncan Pinhas, (null)
+title: Track 03
+metadata_file_update
+artist: Duncan Pinhas, (null)
+title: Track 03
+ezstream: Streaming ``Duncan Pinhas - Kolol - Track 03'' (file: /home/radio/audio/3/03 Track 03.mp3)
+ezstream: shout_send(): Socket error
+ezstream: Connection to http://radio.swirly.com:8000/radio lost
+ezstream: Attempting reconnection #1: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #2: OK
+ezstream: Reconnect to http://radio.swirly.com:8000/radio successful
+metadata_file_update
+artist: Zap Mama, (null)
+title: Eie Buma
+metadata_file_update
+artist: Zap Mama, (null)
+title: Eie Buma
+ezstream: Streaming ``Zap Mama - 7 - Eie Buma'' (file: /home/radio/audio/4/11 Eie Buma.mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: Chromatik (Orbzone)
+metadata_file_update
+artist: The Orb, (null)
+title: Chromatik (Orbzone)
+ezstream: Streaming ``The Orb - Orbsessions, Volume One - Chromatik (Orbzone)'' (file: /home/radio/audio/4/03 Chromatik (Orbzone).mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: Valley
+metadata_file_update
+artist: The Orb, (null)
+title: Valley
+ezstream: Streaming ``The Orb - Orbus Terrarum - Valley'' (file: /home/radio/audio/3/01 Valley.mp3)
+ezstream: shout_send(): Socket error
+ezstream: Connection to http://radio.swirly.com:8000/radio lost
+ezstream: Attempting reconnection #1: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #2: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #3: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #4: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #5: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #6: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #7: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #8: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #9: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #10: OK
+ezstream: Reconnect to http://radio.swirly.com:8000/radio successful
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Rhubarb]
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Rhubarb]
+ezstream: Streaming ``Aphex Twin - Selected Ambient Works, Volume II (disc 1) - [Rhubarb]'' (file: /home/radio/audio/5/03 [Rhubarb].mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Cowboy Bob
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Cowboy Bob
+ezstream: Streaming ``Butthole Surfers - Psychic... Powerless... Another Man's Sac - Cowboy Bob'' (file: /home/radio/audio/0/10 Cowboy Bob.mp3)
+metadata_file_update
+artist: Ni Ni Win Shwe, (null)
+title: My Darling's Love Arrow
+metadata_file_update
+artist: Ni Ni Win Shwe, (null)
+title: My Darling's Love Arrow
+ezstream: Streaming ``Ni Ni Win Shwe - Princess Nicotine: Folk and Pop Music of Myanmar, Volume 1 - My Darling's Love Arrow'' (file: /home/radio/audio/1/12 My Darling's Love Arrow.mp3)
+metadata_file_update
+artist: Can (Czukay with Liebezeit & Rebop Baah), (null)
+title: Cool in the Pool [Movies, 1979]
+metadata_file_update
+artist: Can (Czukay with Liebezeit & Rebop Baah), (null)
+title: Cool in the Pool [Movies, 1979]
+ezstream: Streaming ``Can (Czukay with Liebezeit & Rebop Baah) - The Church of Latter-Day Can (Book Two, 1977-1984) - Cool in the Pool [Movies, 1979]'' (file: /home/radio/audio/5/2-03 Cool in the Pool [Movies, 1979].mp3)
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: Celtic Patchen
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: Celtic Patchen
+ezstream: Streaming ``Sleepytime Gorilla Museum - Live - Celtic Patchen'' (file: /home/radio/audio/4/07 Celtic Patchen.mp3)
+metadata_file_update
+artist: Nusrat Fateh Ali Khan, (null)
+title: 03-Devotional And Love Songs_H
+metadata_file_update
+artist: Nusrat Fateh Ali Khan, (null)
+title: 03-Devotional And Love Songs_H
+ezstream: Streaming ``Nusrat Fateh Ali Khan -   - 03-Devotional And Love Songs_H'' (file: /home/radio/audio/5/03-Devotional And Love Songs_H.mp3)
+metadata_file_update
+artist: Various Artists, (null)
+title: Sekar Sungsang
+metadata_file_update
+artist: Various Artists, (null)
+title: Sekar Sungsang
+ezstream: Streaming ``Various Artists - Indonesia: Music From the Nonesuch Explorer Series - Sekar Sungsang'' (file: /home/radio/audio/5/06 Sekar Sungsang.mp3)
+metadata_file_update
+artist: Fela Kuti, (null)
+title: Alu Jon Jonki Jon
+metadata_file_update
+artist: Fela Kuti, (null)
+title: Alu Jon Jonki Jon
+ezstream: Streaming ``Fela Kuti - Open & Close / Afrodisiac (feat. The Africa '70) - Alu Jon Jonki Jon'' (file: /home/radio/audio/0/04 Alu Jon Jonki Jon.mp3)
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Nobody's Fault but Mine
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Nobody's Fault but Mine
+ezstream: Streaming ``Led Zeppelin - Presence - Nobody's Fault but Mine'' (file: /home/radio/audio/4/04 Nobody's Fault but Mine.mp3)
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Shiny Metal Rods]
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Shiny Metal Rods]
+ezstream: Streaming ``Aphex Twin - Selected Ambient Works, Volume II (disc 2) - [Shiny Metal Rods]'' (file: /home/radio/audio/5/2-03 [Shiny Metal Rods].mp3)
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Stairway To Heaven
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Stairway To Heaven
+ezstream: Streaming ``Led Zeppelin - Ahmet We Did It! - 2007-12-10 - O2 Arena, London - Stairway To Heaven'' (file: /home/radio/audio/3/11 Stairway To Heaven.mp3)
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Communication Breakdown
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Communication Breakdown
+ezstream: Streaming ``Led Zeppelin - Led Zeppelin - Communication Breakdown'' (file: /home/radio/audio/4/07 Communication Breakdown.mp3)
+metadata_file_update
+artist: Suspended Memories, (null)
+title: Different Deserts
+metadata_file_update
+artist: Suspended Memories, (null)
+title: Different Deserts
+ezstream: Streaming ``Suspended Memories - Hearts of Space: Universe 3 - Different Deserts'' (file: /home/radio/audio/3/11 Different Deserts.mp3)
+ezstream: shout_send(): Socket error
+ezstream: Connection to http://radio.swirly.com:8000/radio lost
+ezstream: Attempting reconnection #1: FAILED: Couldn't connect
+ezstream: Waiting 5s for http://radio.swirly.com:8000/radio to come back ...
+ezstream: Attempting reconnection #2: OK
+ezstream: Reconnect to http://radio.swirly.com:8000/radio successful
+metadata_file_update
+artist: Matmos, (null)
+title: Roses and Teeth for Ludwig Wittgenstein
+metadata_file_update
+artist: Matmos, (null)
+title: Roses and Teeth for Ludwig Wittgenstein
+ezstream: Streaming ``Matmos - The Rose Has Teeth in the Mouth of a Beast - Roses and Teeth for Ludwig Wittgenstein'' (file: /home/radio/audio/1/01 Roses and Teeth for Ludwig Wittgenstein.mp3)
+metadata_file_update
+artist: Faust, (null)
+title: Telepathia
+metadata_file_update
+artist: Faust, (null)
+title: Telepathia
+ezstream: Streaming ``Faust - Faust Wakes Nosferatu - Telepathia'' (file: /home/radio/audio/4/03 Telepathia.mp3)
+metadata_file_update
+artist: The Roches, (null)
+title: Gung Ho
+metadata_file_update
+artist: The Roches, (null)
+title: Gung Ho
+ezstream: Streaming ``The Roches - Moonswept - Gung Ho'' (file: /home/radio/audio/1/11 Gung Ho.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Call Me
+metadata_file_update
+artist: Can, (null)
+title: Call Me
+ezstream: Streaming ``Can - Saw Delight - Call Me'' (file: /home/radio/audio/2/03 Call Me.mp3)
+metadata_file_update
+artist: Fela Kuti, (null)
+title: Trouble Sleep Yanga Wake Am
+metadata_file_update
+artist: Fela Kuti, (null)
+title: Trouble Sleep Yanga Wake Am
+ezstream: Streaming ``Fela Kuti - The Underground Spiritual Game (Mixed by Chief Xcel) - Trouble Sleep Yanga Wake Am'' (file: /home/radio/audio/0/03 Trouble Sleep Yanga Wake Am.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Bel Air
+metadata_file_update
+artist: Can, (null)
+title: Bel Air
+ezstream: Streaming ``Can - Future Days - Bel Air'' (file: /home/radio/audio/4/04 Bel Air.mp3)
+metadata_file_update
+artist: Mr. Bungle, (null)
+title: Love Is a Fist
+metadata_file_update
+artist: Mr. Bungle, (null)
+title: Love Is a Fist
+ezstream: Streaming ``Mr. Bungle - Mr. Bungle - Love Is a Fist'' (file: /home/radio/audio/4/09 Love Is a Fist.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Kuntz
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Kuntz
+ezstream: Streaming ``Butthole Surfers - Double Live (disc 2) - Kuntz'' (file: /home/radio/audio/4/10 Kuntz.mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Utopia 84
+metadata_file_update
+artist: Hawkwind, (null)
+title: Utopia 84
+ezstream: Streaming ``Hawkwind - Zones - Utopia 84'' (file: /home/radio/audio/4/06 Utopia 84.mp3)
+metadata_file_update
+artist: The Megatoids, (null)
+title: Trickle-Down Greed
+metadata_file_update
+artist: The Megatoids, (null)
+title: Trickle-Down Greed
+ezstream: Streaming ``The Megatoids - Too Big To Fail - Trickle-Down Greed'' (file: /home/radio/audio/4/08 - Trickle-Down Greed.mp3)
+metadata_file_update
+artist: Faust, (null)
+title: Munic/Yesterday
+metadata_file_update
+artist: Faust, (null)
+title: Munic/Yesterday
+ezstream: Streaming ``Faust - The W????mme Years 1970-73 (disc 4: 71 Minutes) - Munic/Yesterday'' (file: /home/radio/audio/0/01 Munic_Yesterday.mp3)
+metadata_file_update
+artist: Can (Phantom Band with Liebezeit & Rosko Gee), (null)
+title: You Inspired Me [Phantom Band, 1980]
+metadata_file_update
+artist: Can (Phantom Band with Liebezeit & Rosko Gee), (null)
+title: You Inspired Me [Phantom Band, 1980]
+ezstream: Streaming ``Can (Phantom Band with Liebezeit & Rosko Gee) - The Church of Latter-Day Can (Book Two, 1977-1984) - You Inspired Me [Phantom Band, 1980]'' (file: /home/radio/audio/3/2-05 You Inspired Me [Phantom Band, 1980].mp3)
+metadata_file_update
+artist: Arcane Device, (null)
+title: Where Bees Go In
+metadata_file_update
+artist: Arcane Device, (null)
+title: Where Bees Go In
+ezstream: Streaming ``Arcane Device - Trout - Where Bees Go In'' (file: /home/radio/audio/5/04 Where Bees Go In.mp3)
+metadata_file_update
+artist: low light mixes, (null)
+title: 
+metadata_file_update
+artist: low light mixes, (null)
+title: 
+ezstream: Streaming ``low light mixes - '' (file: /home/radio/audio/4/positively_ambient.mp3)
+metadata_file_update
+artist: Matmos, (null)
+title: It Seems
+metadata_file_update
+artist: Matmos, (null)
+title: It Seems
+ezstream: Streaming ``Matmos - Matmos - It Seems'' (file: /home/radio/audio/4/01 It Seems.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Something
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Something
+ezstream: Streaming ``Butthole Surfers - Double Live (disc 2) - Something'' (file: /home/radio/audio/0/14 Something.mp3)
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: Indicatif Radio
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: Indicatif Radio
+ezstream: Streaming ``Richard Pinhas - Iceland - Indicatif Radio'' (file: /home/radio/audio/5/05 Indicatif Radio.mp3)
+metadata_file_update
+artist: Jon Hassell, (null)
+title: Passaggio a Nord-Ovest
+metadata_file_update
+artist: Jon Hassell, (null)
+title: Passaggio a Nord-Ovest
+ezstream: Streaming ``Jon Hassell - Unlimited Ambient - Passaggio a Nord-Ovest'' (file: /home/radio/audio/1/14 Passaggio a Nord-Ovest.mp3)
+metadata_file_update
+artist: low light mixes, (null)
+title: a canticle unfolds
+metadata_file_update
+artist: low light mixes, (null)
+title: a canticle unfolds
+ezstream: Streaming ``low light mixes -  - a canticle unfolds'' (file: /home/radio/audio/1/a canticle unfolds.mp3)
+metadata_file_update
+artist: Nusrat Fateh Ali Khan, (null)
+title: 04-The Last Prophet_Sochan Don
+metadata_file_update
+artist: Nusrat Fateh Ali Khan, (null)
+title: 04-The Last Prophet_Sochan Don
+ezstream: Streaming ``Nusrat Fateh Ali Khan -   - 04-The Last Prophet_Sochan Don'' (file: /home/radio/audio/0/04-The Last Prophet_Sochan Don.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Yoo Doo Right
+metadata_file_update
+artist: Can, (null)
+title: Yoo Doo Right
+ezstream: Streaming ``Can - Monster Movie - Yoo Doo Right'' (file: /home/radio/audio/1/04 Yoo Doo Right.mp3)
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: Tikkun (Part 3)
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: Tikkun (Part 3)
+ezstream: Streaming ``Richard Pinhas - Metatron - Tikkun (Part 3)'' (file: /home/radio/audio/4/2-07 Tikkun (Part 3).mp3)
+metadata_file_update
+artist: Hebron (June 1989 And June 1991): Who Is Hajar?, (null)
+title: Act 2: East Jerusalem
+metadata_file_update
+artist: Hebron (June 1989 And June 1991): Who Is Hajar?, (null)
+title: Act 2: East Jerusalem
+ezstream: Streaming ``Hebron (June 1989 And June 1991): Who Is Hajar? - The Cave - Act 2: East Jerusalem'' (file: /home/radio/audio/1/2-02 Act 2_ East Jerusalem.mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Over the Top
+metadata_file_update
+artist: Hawkwind, (null)
+title: Over the Top
+ezstream: Streaming ``Hawkwind - The Weird Tapes No. 1 - Over the Top'' (file: /home/radio/audio/3/01 Over the Top.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Pittsburg to Lebanon
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Pittsburg to Lebanon
+ezstream: Streaming ``Butthole Surfers - Double Live (disc 1) - Pittsburg to Lebanon'' (file: /home/radio/audio/4/09 Pittsburg to Lebanon.mp3)
+metadata_file_update
+artist: Steve Reich, (null)
+title: Drumming, Part III
+metadata_file_update
+artist: Steve Reich, (null)
+title: Drumming, Part III
+ezstream: Streaming ``Steve Reich - Drumming / Six Pianos / Music for Mallet Instruments, Voices and Organ (disc 1) - Drumming, Part III'' (file: /home/radio/audio/1/1-03 Drumming, Part III.mp3)
+metadata_file_update
+artist: Arcane Device, (null)
+title: Navel To The Moon
+metadata_file_update
+artist: Arcane Device, (null)
+title: Navel To The Moon
+ezstream: Streaming ``Arcane Device - Trout - Navel To The Moon'' (file: /home/radio/audio/2/01 Navel To The Moon.mp3)
+metadata_file_update
+artist: Ravi Shankar, (null)
+title: Dhun
+metadata_file_update
+artist: Ravi Shankar, (null)
+title: Dhun
+ezstream: Streaming ``Ravi Shankar - West Meets East: The Historic Shankar/Menuhin Sessions - Dhun'' (file: /home/radio/audio/3/04 Dhun.mp3)
+metadata_file_update
+artist: Can (Schmidt with Liebezeit, Karoli & Rosko Gee), (null)
+title: Endstation Freiheit [Filmmuzik Vol. 2, 1981]
+metadata_file_update
+artist: Can (Schmidt with Liebezeit, Karoli & Rosko Gee), (null)
+title: Endstation Freiheit [Filmmuzik Vol. 2, 1981]
+ezstream: Streaming ``Can (Schmidt with Liebezeit, Karoli & Rosko Gee) - The Church of Latter-Day Can (Book Two, 1977-1984) - Endstation Freiheit [Filmmuzik Vol. 2, 1981]'' (file: /home/radio/audio/2/2-14 Endstation Freiheit [Filmmuzik Vol. 2, 1981].mp3)
+metadata_file_update
+artist: Fripp & Eno, (null)
+title: The Heavenly Music Corporation (half speed), Part 3
+metadata_file_update
+artist: Fripp & Eno, (null)
+title: The Heavenly Music Corporation (half speed), Part 3
+ezstream: Streaming ``Fripp & Eno - (No Pussyfooting) (disc 2) - The Heavenly Music Corporation (half speed), Part 3'' (file: /home/radio/audio/1/03 The Heavenly Music Corporation (half speed), Part 3.mp3)
+metadata_file_update
+artist: Aphex Twin, (null)
+title: i
+metadata_file_update
+artist: Aphex Twin, (null)
+title: i
+ezstream: Streaming ``Aphex Twin - Selected Ambient Works 85-92 - i'' (file: /home/radio/audio/0/05 i.mp3)
+metadata_file_update
+artist: Sekeha Gamelan, (null)
+title: Gending Genjek Pasubaya
+metadata_file_update
+artist: Sekeha Gamelan, (null)
+title: Gending Genjek Pasubaya
+ezstream: Streaming ``Sekeha Gamelan - The Best 4 In 1 Gamelan From Eastern Of Bali - Gending Genjek Pasubaya'' (file: /home/radio/audio/5/07 Gending Genjek Pasubaya.mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: It's a Small World
+metadata_file_update
+artist: The Orb, (null)
+title: It's a Small World
+ezstream: Streaming ``The Orb - Orbsessions, Volume Two - It's a Small World'' (file: /home/radio/audio/1/06 It's a Small World.mp3)
+metadata_file_update
+artist: Faust, (null)
+title: Four Plus Seven Means Eleven (remixed by Dax & Pieper)
+metadata_file_update
+artist: Faust, (null)
+title: Four Plus Seven Means Eleven (remixed by Dax & Pieper)
+ezstream: Streaming ``Faust - Freispiel - Four Plus Seven Means Eleven (remixed by Dax & Pieper)'' (file: /home/radio/audio/4/12 Four Plus Seven Means Eleven (remixed by Dax & Pieper).mp3)
+metadata_file_update
+artist: Matmos, (null)
+title: The Spiral Slice
+metadata_file_update
+artist: Matmos, (null)
+title: The Spiral Slice
+ezstream: Streaming ``Matmos - Supreme Balloon [Bonus Track] - The Spiral Slice'' (file: /home/radio/audio/5/09 The Spiral Slice.mp3)
+metadata_file_update
+artist: Melodium, (null)
+title: Flacana 13
+metadata_file_update
+artist: Melodium, (null)
+title: Flacana 13
+ezstream: Streaming ``Melodium - Flacana Flacana - Flacana 13'' (file: /home/radio/audio/4/13 Flacana 13.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Vernal Equinox
+metadata_file_update
+artist: Can, (null)
+title: Vernal Equinox
+ezstream: Streaming ``Can - Landed - Vernal Equinox'' (file: /home/radio/audio/2/04 Vernal Equinox.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Hey
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Hey
+ezstream: Streaming ``Butthole Surfers - Double Live (disc 1) - Hey'' (file: /home/radio/audio/2/11 Hey.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Hay
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Hay
+ezstream: Streaming ``Butthole Surfers - Locust Abortion Technician - Hay'' (file: /home/radio/audio/5/05 Hay.mp3)
+metadata_file_update
+artist: Ravi Shankar, (null)
+title: Mahaa Mrityunjaya
+metadata_file_update
+artist: Ravi Shankar, (null)
+title: Mahaa Mrityunjaya
+ezstream: Streaming ``Ravi Shankar - Chants of India - Mahaa Mrityunjaya'' (file: /home/radio/audio/0/08 Mahaa Mrityunjaya.mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: Pi
+metadata_file_update
+artist: The Orb, (null)
+title: Pi
+ezstream: Streaming ``The Orb - Orblivion - Pi'' (file: /home/radio/audio/5/06 Pi.mp3)
+metadata_file_update
+artist: Indonesia: Smithsonian Folkways, (null)
+title: Pinasa Si Dung-Dungon (Music Of The Toba)
+metadata_file_update
+artist: Indonesia: Smithsonian Folkways, (null)
+title: Pinasa Si Dung-Dungon (Music Of The Toba)
+ezstream: Streaming ``Indonesia: Smithsonian Folkways - 04: Music Of Nias & North Sumatra: Ho Ho, Gendang Karo, Gondang Toba - Pinasa Si Dung-Dungon (Music Of The Toba)'' (file: /home/radio/audio/4/15 Pinasa Si Dung-Dungon (Music Of The Toba).mp3)
+metadata_file_update
+artist: Nusrat Fateh Ali Khan & Michael Brook, (null)
+title: Longing
+metadata_file_update
+artist: Nusrat Fateh Ali Khan & Michael Brook, (null)
+title: Longing
+ezstream: Streaming ``Nusrat Fateh Ali Khan & Michael Brook - Night Song - Longing'' (file: /home/radio/audio/5/05 Longing.mp3)
+metadata_file_update
+artist: Steve Reich, (null)
+title: Clapping Music
+metadata_file_update
+artist: Steve Reich, (null)
+title: Clapping Music
+ezstream: Streaming ``Steve Reich - Early Works - Clapping Music'' (file: /home/radio/audio/4/03 Clapping Music.mp3)
+metadata_file_update
+artist: Facil, (null)
+title: 89-16
+metadata_file_update
+artist: Facil, (null)
+title: 89-16
+ezstream: Streaming ``Facil - Ambient Systems (disc 2) - 89-16'' (file: /home/radio/audio/4/2-06 89-16.mp3)
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: Greenland
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: Greenland
+ezstream: Streaming ``Richard Pinhas - Iceland - Greenland'' (file: /home/radio/audio/0/08 Greenland.mp3)
+metadata_file_update
+artist: Aphex Twin, (null)
+title: Blue Calx
+metadata_file_update
+artist: Aphex Twin, (null)
+title: Blue Calx
+ezstream: Streaming ``Aphex Twin - Back to Mine: The Orb - Blue Calx'' (file: /home/radio/audio/2/10 Blue Calx.mp3)
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: Ossuary
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: Ossuary
+ezstream: Streaming ``Sleepytime Gorilla Museum - In Glorious Times - Ossuary'' (file: /home/radio/audio/0/06 Ossuary.mp3)
+metadata_file_update
+artist: Nusrat Fateh Ali Khan & Michael Brook, (null)
+title: Crest
+metadata_file_update
+artist: Nusrat Fateh Ali Khan & Michael Brook, (null)
+title: Crest
+ezstream: Streaming ``Nusrat Fateh Ali Khan & Michael Brook - Night Song - Crest'' (file: /home/radio/audio/2/08 Crest.mp3)
+metadata_file_update
+artist: Terry Riley, (null)
+title: The Room Of Remembrance, Part II
+metadata_file_update
+artist: Terry Riley, (null)
+title: The Room Of Remembrance, Part II
+ezstream: Streaming ``Terry Riley - Zeitgeist Intuitive Leaps - The Room Of Remembrance, Part II'' (file: /home/radio/audio/0/06 The Room Of Remembrance, Part II.mp3)
+metadata_file_update
+artist: Bo Hein, (null)
+title: Burmese Golden Drum
+metadata_file_update
+artist: Bo Hein, (null)
+title: Burmese Golden Drum
+ezstream: Streaming ``Bo Hein - Princess Nicotine: Folk and Pop Music of Myanmar, Volume 1 - Burmese Golden Drum'' (file: /home/radio/audio/4/01 Burmese Golden Drum.mp3)
+metadata_file_update
+artist: Faust, (null)
+title: Krautrock
+metadata_file_update
+artist: Faust, (null)
+title: Krautrock
+ezstream: Streaming ``Faust - Faust IV (bonus disc) - Krautrock'' (file: /home/radio/audio/1/2-02 Krautrock.mp3)
+metadata_file_update
+artist: Terry Riley, (null)
+title: Nine
+metadata_file_update
+artist: Terry Riley, (null)
+title: Nine
+ezstream: Streaming ``Terry Riley - Last Camel In Paris: Th????tre Edouard VII, Paris 10 November 1978 - Nine'' (file: /home/radio/audio/2/09 Nine.mp3)
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Curtains]
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Curtains]
+ezstream: Streaming ``Aphex Twin - Selected Ambient Works, Volume II (disc 1) - [Curtains]'' (file: /home/radio/audio/3/06 [Curtains].mp3)
+metadata_file_update
+artist: Boards Of Canada, (null)
+title: Turquoise Hexagon Sun
+metadata_file_update
+artist: Boards Of Canada, (null)
+title: Turquoise Hexagon Sun
+ezstream: Streaming ``Boards Of Canada - Music Has The Right To Children - Turquoise Hexagon Sun'' (file: /home/radio/audio/1/07 Turquoise Hexagon Sun.mp3)
+metadata_file_update
+artist: Terry Riley, (null)
+title: Two
+metadata_file_update
+artist: Terry Riley, (null)
+title: Two
+ezstream: Streaming ``Terry Riley - Last Camel In Paris: Th????tre Edouard VII, Paris 10 November 1978 - Two'' (file: /home/radio/audio/3/02 Two.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Future Days
+metadata_file_update
+artist: Can, (null)
+title: Future Days
+ezstream: Streaming ``Can - Future Days - Future Days'' (file: /home/radio/audio/3/01 Future Days.mp3)
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Domino]
+metadata_file_update
+artist: Aphex Twin, (null)
+title: [Domino]
+ezstream: Streaming ``Aphex Twin - Selected Ambient Works, Volume II (disc 1) - [Domino]'' (file: /home/radio/audio/3/10 [Domino].mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Down Through the Night
+metadata_file_update
+artist: Hawkwind, (null)
+title: Down Through the Night
+ezstream: Streaming ``Hawkwind - Space Ritual (disc 1) - Down Through the Night'' (file: /home/radio/audio/1/1-02 Down Through the Night.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Mother Sky
+metadata_file_update
+artist: Can, (null)
+title: Mother Sky
+ezstream: Streaming ``Can - Soundtracks - Mother Sky'' (file: /home/radio/audio/3/06 Mother Sky.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Last Night Sleep
+metadata_file_update
+artist: Can, (null)
+title: Last Night Sleep
+ezstream: Streaming ``Can - Until the End of the World - Last Night Sleep'' (file: /home/radio/audio/4/07 Last Night Sleep.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Graveyard
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Graveyard
+ezstream: Streaming ``Butthole Surfers - Double Live (disc 2) - Graveyard'' (file: /home/radio/audio/5/01 Graveyard.mp3)
+metadata_file_update
+artist: Terry Riley, (null)
+title: Conquest of the War Demons: IV. Combat Dance
+metadata_file_update
+artist: Terry Riley, (null)
+title: Conquest of the War Demons: IV. Combat Dance
+ezstream: Streaming ``Terry Riley - Salome Dances for Peace (disc 1) - Conquest of the War Demons: IV. Combat Dance'' (file: /home/radio/audio/5/1-12 Conquest of the War Demons_ IV. Combat Dance.mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: Towers of Dub
+metadata_file_update
+artist: The Orb, (null)
+title: Towers of Dub
+ezstream: Streaming ``The Orb - U.F.Orb - Towers of Dub'' (file: /home/radio/audio/5/04 Towers of Dub.mp3)
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: The Stain
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: The Stain
+ezstream: Streaming ``Sleepytime Gorilla Museum - Grand Opening and Closing - The Stain'' (file: /home/radio/audio/3/07 The Stain.mp3)
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Dancing Days
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Dancing Days
+ezstream: Streaming ``Led Zeppelin - Houses of the Holy - Dancing Days'' (file: /home/radio/audio/0/05 Dancing Days.mp3)
+metadata_file_update
+artist: processor music, (null)
+title: neura
+metadata_file_update
+artist: processor music, (null)
+title: neura
+ezstream: Streaming ``processor music - ourobouros - neura'' (file: /home/radio/audio/3/11 neura.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Tony Wanna Go
+metadata_file_update
+artist: Can, (null)
+title: Tony Wanna Go
+ezstream: Streaming ``Can - Peel Sessions - Tony Wanna Go'' (file: /home/radio/audio/5/04 Tony Wanna Go.mp3)
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Since I've Been Loving You
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Since I've Been Loving You
+ezstream: Streaming ``Led Zeppelin - How the West Was Won (disc 1) - Since I've Been Loving You'' (file: /home/radio/audio/1/1-06 Since I've Been Loving You.mp3)
+metadata_file_update
+artist: Nusrat Fateh Ali Khan & Michael Brook, (null)
+title: Taa Deem (Asian Dub Foundation remix)
+metadata_file_update
+artist: Nusrat Fateh Ali Khan & Michael Brook, (null)
+title: Taa Deem (Asian Dub Foundation remix)
+ezstream: Streaming ``Nusrat Fateh Ali Khan & Michael Brook - Star Rise - Taa Deem (Asian Dub Foundation remix)'' (file: /home/radio/audio/5/03 Taa Deem (Asian Dub Foundation remix).mp3)
+metadata_file_update
+artist: Matmos, (null)
+title: Supreme Balloon
+metadata_file_update
+artist: Matmos, (null)
+title: Supreme Balloon
+ezstream: Streaming ``Matmos - Supreme Balloon - Supreme Balloon'' (file: /home/radio/audio/2/06 Supreme Balloon.mp3)
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: FC: The Freedom Club
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: FC: The Freedom Club
+ezstream: Streaming ``Sleepytime Gorilla Museum - Of Natural History - FC: The Freedom Club'' (file: /home/radio/audio/2/05 FC_ The Freedom Club.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Too Parter
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Too Parter
+ezstream: Streaming ``Butthole Surfers - Double Live (disc 1) - Too Parter'' (file: /home/radio/audio/4/01 Too Parter.mp3)
+metadata_file_update
+artist: The Roches, (null)
+title: No Shoes
+metadata_file_update
+artist: The Roches, (null)
+title: No Shoes
+ezstream: Streaming ``The Roches - Moonswept - No Shoes'' (file: /home/radio/audio/1/03 No Shoes.mp3)
+metadata_file_update
+artist: Indonesia: Smithsonian Folkways, (null)
+title: Hoho Sisambua'a Matona (Music Of The Ono Niha)
+metadata_file_update
+artist: Indonesia: Smithsonian Folkways, (null)
+title: Hoho Sisambua'a Matona (Music Of The Ono Niha)
+ezstream: Streaming ``Indonesia: Smithsonian Folkways - 04: Music Of Nias & North Sumatra: Ho Ho, Gendang Karo, Gondang Toba - Hoho Sisambua'a Matona (Music Of The Ono Niha)'' (file: /home/radio/audio/0/03 Hoho Sisambua'a Matona (Music Of The Ono Niha).mp3)
+metadata_file_update
+artist: Salah Abd Alghafour, (null)
+title: Walla (By God)
+metadata_file_update
+artist: Salah Abd Alghafour, (null)
+title: Walla (By God)
+ezstream: Streaming ``Salah Abd Alghafour - Choubi Choubi!: Folk and Pop Songs From Iraq - Walla (By God)'' (file: /home/radio/audio/2/14 Walla (By God).mp3)
+metadata_file_update
+artist: Ravi Shankar, (null)
+title: Veenaa-Murali
+metadata_file_update
+artist: Ravi Shankar, (null)
+title: Veenaa-Murali
+ezstream: Streaming ``Ravi Shankar - Chants of India - Veenaa-Murali'' (file: /home/radio/audio/1/09 Veenaa-Murali.mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Space Is Deep
+metadata_file_update
+artist: Hawkwind, (null)
+title: Space Is Deep
+ezstream: Streaming ``Hawkwind - The Best of Hawkwind - Space Is Deep'' (file: /home/radio/audio/4/05 Space Is Deep.mp3)
+metadata_file_update
+artist: Faust, (null)
+title: Just a Second (Starts Like That!) / Picnic on a Frozen River / Deuxieme Tableux
+metadata_file_update
+artist: Faust, (null)
+title: Just a Second (Starts Like That!) / Picnic on a Frozen River / Deuxieme Tableux
+ezstream: Streaming ``Faust - Faust IV - Just a Second (Starts Like That!) / Picnic on a Frozen River / Deuxieme Tableux'' (file: /home/radio/audio/0/1-04 Just a Second (Starts Like That!) _ Picnic on a Frozen River _ Deuxieme Tableux.mp3)
+metadata_file_update
+artist: The Church Universal and Triumphant, (null)
+title: Video Shorts With 2 Announcements
+metadata_file_update
+artist: The Church Universal and Triumphant, (null)
+title: Video Shorts With 2 Announcements
+ezstream: Streaming ``The Church Universal and Triumphant - Sounds of American Doomsday Cults, Volume 14 - Video Shorts With 2 Announcements'' (file: /home/radio/audio/4/03 Video Shorts With 2 Announcements.mp3)
+metadata_file_update
+artist: Heldon, (null)
+title: Stand By
+metadata_file_update
+artist: Heldon, (null)
+title: Stand By
+ezstream: Streaming ``Heldon - Stand By - Stand By'' (file: /home/radio/audio/4/01 Stand By.mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Paranoia, Part 2
+metadata_file_update
+artist: Hawkwind, (null)
+title: Paranoia, Part 2
+ezstream: Streaming ``Hawkwind - Hawkwind - Paranoia, Part 2'' (file: /home/radio/audio/0/05 Paranoia, Part 2.mp3)
+metadata_file_update
+artist: Harold Budd/Brian Eno, (null)
+title: An Arc of Doves
+metadata_file_update
+artist: Harold Budd/Brian Eno, (null)
+title: An Arc of Doves
+ezstream: Streaming ``Harold Budd/Brian Eno - Ambient 2: The Plateaux of Mirror - An Arc of Doves'' (file: /home/radio/audio/0/05 An Arc of Doves.mp3)
+metadata_file_update
+artist: Gloria Cheng-Cochran, (null)
+title: Phrygian Gates
+metadata_file_update
+artist: Gloria Cheng-Cochran, (null)
+title: Phrygian Gates
+ezstream: Streaming ``Gloria Cheng-Cochran - Piano Music Of John Adams & Terry Riley - Phrygian Gates'' (file: /home/radio/audio/5/08 Phrygian Gates.mp3)
+metadata_file_update
+artist: CAN, (null)
+title: Halleluhwah
+metadata_file_update
+artist: CAN, (null)
+title: Halleluhwah
+ezstream: Streaming ``CAN - Tago Mago - Halleluhwah'' (file: /home/radio/audio/5/04 Halleluhwah 1.mp3)
+metadata_file_update
+artist: [unknown], (null)
+title: Radio Jakarta #2
+metadata_file_update
+artist: [unknown], (null)
+title: Radio Jakarta #2
+ezstream: Streaming ``[unknown] - Radio Java - Radio Jakarta #2'' (file: /home/radio/audio/2/03 Radio Jakarta #2.mp3)
+metadata_file_update
+artist: David Lee Myers, (null)
+title: MG 24.312
+metadata_file_update
+artist: David Lee Myers, (null)
+title: MG 24.312
+ezstream: Streaming ``David Lee Myers - Arcane Device: Engine of Myth - MG 24.312'' (file: /home/radio/audio/5/03 MG 24.312.mp3)
+metadata_file_update
+artist: Streetlab, (null)
+title: Led Zeppelin - The Immigrant Song (Streetlab 2009 mix)
+metadata_file_update
+artist: Streetlab, (null)
+title: Led Zeppelin - The Immigrant Song (Streetlab 2009 mix)
+ezstream: Streaming ``Streetlab - Bootleg Remixes Vol. 1 - Led Zeppelin - The Immigrant Song (Streetlab 2009 mix)'' (file: /home/radio/audio/1/05 Led Zeppelin - The Immigrant Song (Streetlab 2009 mix).mp3)
+metadata_file_update
+artist: Mr. Bungle, (null)
+title: Retrovertigo
+metadata_file_update
+artist: Mr. Bungle, (null)
+title: Retrovertigo
+ezstream: Streaming ``Mr. Bungle - California - Retrovertigo'' (file: /home/radio/audio/0/03 Retrovertigo.mp3)
+metadata_file_update
+artist: Souad Abdullah, (null)
+title: [unknown]
+metadata_file_update
+artist: Souad Abdullah, (null)
+title: [unknown]
+ezstream: Streaming ``Souad Abdullah - Choubi Choubi!: Folk and Pop Songs From Iraq - [unknown]'' (file: /home/radio/audio/0/16 [unknown].mp3)
+metadata_file_update
+artist: Fela Kuti, (null)
+title: Lady
+metadata_file_update
+artist: Fela Kuti, (null)
+title: Lady
+ezstream: Streaming ``Fela Kuti - Shakara / London Scene - Lady'' (file: /home/radio/audio/4/01 Lady.mp3)
+metadata_file_update
+artist: Ice, (null)
+title: The Dredger
+metadata_file_update
+artist: Ice, (null)
+title: The Dredger
+ezstream: Streaming ``Ice - Ambient 4: Isolationism (disc 1) - The Dredger'' (file: /home/radio/audio/0/1-03 The Dredger.mp3)
+metadata_file_update
+artist: Om Prakash Sharma, dilruba; Zamir Ahmad Khan, tabla, (null)
+title: Raga Kalavati Tala Tintala
+metadata_file_update
+artist: Om Prakash Sharma, dilruba; Zamir Ahmad Khan, tabla, (null)
+title: Raga Kalavati Tala Tintala
+ezstream: Streaming ``Om Prakash Sharma, dilruba; Zamir Ahmad Khan, tabla - An Anthology of World Music: North Indian Classical Music - Raga Kalavati Tala Tintala'' (file: /home/radio/audio/2/4-02 Raga Kalavati Tala Tintala.mp3)
+metadata_file_update
+artist: Terry Riley, (null)
+title: The Harp of New Albion: IV. Cadence on the Wind
+metadata_file_update
+artist: Terry Riley, (null)
+title: The Harp of New Albion: IV. Cadence on the Wind
+ezstream: Streaming ``Terry Riley - The Harp of New Albion (disc 2) - The Harp of New Albion: IV. Cadence on the Wind'' (file: /home/radio/audio/4/2-01 The Harp of New Albion_ IV. Cadence on the Wind.mp3)
+metadata_file_update
+artist: Can (Dunkelziffer with Liebezeit), (null)
+title: Strom [Stil Der Neuen Zeit EP, 1982]
+metadata_file_update
+artist: Can (Dunkelziffer with Liebezeit), (null)
+title: Strom [Stil Der Neuen Zeit EP, 1982]
+ezstream: Streaming ``Can (Dunkelziffer with Liebezeit) - The Church of Latter-Day Can (Book Two, 1977-1984) - Strom [Stil Der Neuen Zeit EP, 1982]'' (file: /home/radio/audio/0/2-15 Strom [Stil Der Neuen Zeit EP, 1982].mp3)
+metadata_file_update
+artist: David Bowie, (null)
+title: Fame
+metadata_file_update
+artist: David Bowie, (null)
+title: Fame
+ezstream: Streaming ``David Bowie - Young Americans - Fame'' (file: /home/radio/audio/1/08 Fame.mp3)
+metadata_file_update
+artist: King Crimson, (null)
+title: Prism (live)
+metadata_file_update
+artist: King Crimson, (null)
+title: Prism (live)
+ezstream: Streaming ``King Crimson - Sometimes God Smiles: The Young Persons' Guide to Discipline, Volume II - Prism (live)'' (file: /home/radio/audio/0/20 Prism (live).mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Butthole Surfer
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Butthole Surfer
+ezstream: Streaming ``Butthole Surfers - Psychic... Powerless... Another Man's Sac - Butthole Surfer'' (file: /home/radio/audio/4/06 Butthole Surfer.mp3)
+metadata_file_update
+artist: David Bowie, (null)
+title: It's Gonna Be Me  [Ryko Edition Only]
+metadata_file_update
+artist: David Bowie, (null)
+title: It's Gonna Be Me  [Ryko Edition Only]
+ezstream: Streaming ``David Bowie - Young Americans - It's Gonna Be Me  [Ryko Edition Only]'' (file: /home/radio/audio/4/10 It's Gonna Be Me  [Ryko Edition Only].mp3)
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: The ICS
+metadata_file_update
+artist: Richard Pinhas, (null)
+title: The ICS
+ezstream: Streaming ``Richard Pinhas - Event and Repetitions - The ICS'' (file: /home/radio/audio/5/02 The ICS.mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: Bedouin (The sheiks film mix)
+metadata_file_update
+artist: The Orb, (null)
+title: Bedouin (The sheiks film mix)
+ezstream: Streaming ``The Orb - Orbscure Trax: The Rare Excursions - Bedouin (The sheiks film mix)'' (file: /home/radio/audio/0/05 Bedouin (The sheiks film mix).mp3)
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: The Greenless Wreath
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: The Greenless Wreath
+ezstream: Streaming ``Sleepytime Gorilla Museum - In Glorious Times - The Greenless Wreath'' (file: /home/radio/audio/3/09 The Greenless Wreath.mp3)
+metadata_file_update
+artist: Tod Dockstader & David Lee Myers, (null)
+title: Swarm
+metadata_file_update
+artist: Tod Dockstader & David Lee Myers, (null)
+title: Swarm
+ezstream: Streaming ``Tod Dockstader & David Lee Myers - Pond - Swarm'' (file: /home/radio/audio/5/09 Swarm.mp3)
+metadata_file_update
+artist: Holger Czukay, (null)
+title: Traum Mal Wieder
+metadata_file_update
+artist: Holger Czukay, (null)
+title: Traum Mal Wieder
+ezstream: Streaming ``Holger Czukay - A Brief History of Ambient, Volume 1 (disc 2) - Traum Mal Wieder'' (file: /home/radio/audio/4/2-14 Traum Mal Wieder.mp3)
+metadata_file_update
+artist: [unknown], (null)
+title: Radio Surabaya
+metadata_file_update
+artist: [unknown], (null)
+title: Radio Surabaya
+ezstream: Streaming ``[unknown] - Radio Java - Radio Surabaya'' (file: /home/radio/audio/1/02 Radio Surabaya.mp3)
+metadata_file_update
+artist: David Bowie, (null)
+title: Who Can I Be Now?  [Ryko Edition Only]
+metadata_file_update
+artist: David Bowie, (null)
+title: Who Can I Be Now?  [Ryko Edition Only]
+ezstream: Streaming ``David Bowie - Young Americans - Who Can I Be Now?  [Ryko Edition Only]'' (file: /home/radio/audio/3/09 Who Can I Be Now_  [Ryko Edition Only].mp3)
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Stairway to Heaven
+metadata_file_update
+artist: Led Zeppelin, (null)
+title: Stairway to Heaven
+ezstream: Streaming ``Led Zeppelin - How the West Was Won (disc 1) - Stairway to Heaven'' (file: /home/radio/audio/2/1-07 Stairway to Heaven.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Revolution, Part 2
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Revolution, Part 2
+ezstream: Streaming ``Butthole Surfers - Piouhgd - Revolution, Part 2'' (file: /home/radio/audio/4/02 Revolution, Part 2.mp3)
+metadata_file_update
+artist: Can, (null)
+title: I Want More
+metadata_file_update
+artist: Can, (null)
+title: I Want More
+ezstream: Streaming ``Can - Flow Motion - I Want More'' (file: /home/radio/audio/5/01 I Want More.mp3)
+metadata_file_update
+artist: King Crimson, (null)
+title: Cage
+metadata_file_update
+artist: King Crimson, (null)
+title: Cage
+ezstream: Streaming ``King Crimson - Sometimes God Hides: The Young Persons' Guide to Discipline - Cage'' (file: /home/radio/audio/3/01 Cage.mp3)
+metadata_file_update
+artist: Arcane Device, (null)
+title: Diabolis Ex Machina Part 14
+metadata_file_update
+artist: Arcane Device, (null)
+title: Diabolis Ex Machina Part 14
+ezstream: Streaming ``Arcane Device - Diabolis Ex Machina - Diabolis Ex Machina Part 14'' (file: /home/radio/audio/4/14 Diabolis Ex Machina Part 14.mp3)
+metadata_file_update
+artist: The Orb, (null)
+title: Toxygene (Ganja Kru remix)
+metadata_file_update
+artist: The Orb, (null)
+title: Toxygene (Ganja Kru remix)
+ezstream: Streaming ``The Orb - Orbscure Trax: The Rare Excursions - Toxygene (Ganja Kru remix)'' (file: /home/radio/audio/4/01 Toxygene (Ganja Kru remix).mp3)
+metadata_file_update
+artist: Meat Beat Manifesto, (null)
+title: Radio Babylon (Beach Blanket Bimboland mix)
+metadata_file_update
+artist: Meat Beat Manifesto, (null)
+title: Radio Babylon (Beach Blanket Bimboland mix)
+ezstream: Streaming ``Meat Beat Manifesto - Auntie Aubrey's Excursions Beyond the Call of Duty, Part 2 (disc 1) - Radio Babylon (Beach Blanket Bimboland mix)'' (file: /home/radio/audio/2/1-05 Radio Babylon (Beach Blanket Bimboland mix).mp3)
+metadata_file_update
+artist: Jah Wobble, (null)
+title: Not Another
+metadata_file_update
+artist: Jah Wobble, (null)
+title: Not Another
+ezstream: Streaming ``Jah Wobble - A Brief History of Ambient, Volume 2: Imaginary Landscapes (disc 1) - Not Another'' (file: /home/radio/audio/2/1-13 Not Another.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Safe
+metadata_file_update
+artist: Can, (null)
+title: Safe
+ezstream: Streaming ``Can - Inner Space - Safe'' (file: /home/radio/audio/0/02 Safe.mp3)
+metadata_file_update
+artist: Arcane Device, (null)
+title: Diabolis Ex Machina Part 03
+metadata_file_update
+artist: Arcane Device, (null)
+title: Diabolis Ex Machina Part 03
+ezstream: Streaming ``Arcane Device - Diabolis Ex Machina - Diabolis Ex Machina Part 03'' (file: /home/radio/audio/1/03 Diabolis Ex Machina Part 03.mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Children of the Sun
+metadata_file_update
+artist: Hawkwind, (null)
+title: Children of the Sun
+ezstream: Streaming ``Hawkwind - In Search of Space - Children of the Sun'' (file: /home/radio/audio/0/06 Children of the Sun.mp3)
+metadata_file_update
+artist: Terry Riley, (null)
+title: Salome's Excellent Extension, Part III
+metadata_file_update
+artist: Terry Riley, (null)
+title: Salome's Excellent Extension, Part III
+ezstream: Streaming ``Terry Riley - Zeitgeist Intuitive Leaps - Salome's Excellent Extension, Part III'' (file: /home/radio/audio/5/03 Salome's Excellent Extension, Part III.mp3)
+metadata_file_update
+artist: Triola, (null)
+title: AG Penthouse
+metadata_file_update
+artist: Triola, (null)
+title: AG Penthouse
+ezstream: Streaming ``Triola - Pop Ambient 2002 - AG Penthouse'' (file: /home/radio/audio/3/02 AG Penthouse.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Graveyard
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: Graveyard
+ezstream: Streaming ``Butthole Surfers - Locust Abortion Technician - Graveyard'' (file: /home/radio/audio/0/10 Graveyard.mp3)
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: Bring Back the Apocalypse
+metadata_file_update
+artist: Sleepytime Gorilla Museum, (null)
+title: Bring Back the Apocalypse
+ezstream: Streaming ``Sleepytime Gorilla Museum - Of Natural History - Bring Back the Apocalypse'' (file: /home/radio/audio/1/04 Bring Back the Apocalypse.mp3)
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: The Colored F.B.I. Guy
+metadata_file_update
+artist: Butthole Surfers, (null)
+title: The Colored F.B.I. Guy
+ezstream: Streaming ``Butthole Surfers - Widowermaker! - The Colored F.B.I. Guy'' (file: /home/radio/audio/5/03 The Colored F.B.I. Guy.mp3)
+metadata_file_update
+artist: , (null)
+title: Track 7
+metadata_file_update
+artist: , (null)
+title: Track 7
+ezstream: Streaming `` - Live at Knitting Factory 2000 - Track 7'' (file: /home/radio/audio/4/07 Track 7.mp3)
+metadata_file_update
+artist: Can, (null)
+title: Dizzy Dizzy
+metadata_file_update
+artist: Can, (null)
+title: Dizzy Dizzy
+ezstream: Streaming ``Can - Soon Over Babaluma - Dizzy Dizzy'' (file: /home/radio/audio/5/01 Dizzy Dizzy.mp3)
+metadata_file_update
+artist: System 7, (null)
+title: Sunburst (Orb remix)
+metadata_file_update
+artist: System 7, (null)
+title: Sunburst (Orb remix)
+ezstream: Streaming ``System 7 - Auntie Aubrey's Excursions Beyond the Call of Duty, Part 2 (disc 2) - Sunburst (Orb remix)'' (file: /home/radio/audio/0/2-06 Sunburst (Orb remix).mp3)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Damnation Alley (The Rockfield Studio Session Tapes - Previously Unreleased Alternate Harmony Vocal Version)
+metadata_file_update
+artist: Hawkwind, (null)
+title: Damnation Alley (The Rockfield Studio Session Tapes - Previously Unreleased Alternate Harmony Vocal Version)
+ezstream: Streaming ``Hawkwind - Quark, Strangeness And Charm - Damnation Alley (The Rockfield Studio Session Tapes - Previously Unreleased Alternate Harmony Vocal Version)'' (file: /home/radio/audio/3/2-06 Damnation Alley (The Rockfield Studio Session Tapes - Previously Unreleased Alternate Harmony Vocal Version).mp3)

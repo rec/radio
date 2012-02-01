@@ -1,9 +1,11 @@
 var googleMap;
 var listenerFetchInterval = 10000;
 
+
 function listenersArrived(request) {
   try {
     listeners = request.responseText.evalJSON();
+    // alert('listeners! ' + listeners.listeners.length);
     setListenerCount(listeners.listeners.length);
     if (listeners.broadcaster) {
       googleMap.addBroadcastMarker(listeners.broadcaster);
@@ -32,7 +34,7 @@ function bounceBroadcaster() {
 
 function unbounceBroadcaster() {  
   googleMap.setBroadcastMarkerAnimation(false);
-  setTimeout('bounceBroadcaster()', 30000);
+  setTimeout('bounceBroadcaster()', 60000);
 };
 
 function startMaps() {
