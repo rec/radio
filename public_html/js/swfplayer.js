@@ -1,6 +1,6 @@
 
 function createSWFPlayer(container) {
-  var so = new SWFObject('swf/player.swf', 'mpl', 400, 20, '9');
+  var so = new SWFObject('swf/player.swf', 'mpl', 400, 24, '9');
 
   so.addParam('allowscriptaccess','always');
   so.addParam('allowfullscreen','true');
