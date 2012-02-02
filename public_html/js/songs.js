@@ -34,10 +34,18 @@ function makeScroller(titleList) {
   return scroller.join('\n');
 };
 
+function onStatus(response) {
+  document.getElementById('SongHistory').innerHTML =
+    makeScroller(response.titleList || []);
+};
+
 function start() {
-  new Repeater('status', 3000, function(response) {
-      document.getElementById('SongHistory').innerHTML =
-        makeScroller(response.titleList || []);
+  var title = '';
+  new Repeater('title', 1000, function(response) {
+      if (response.title != title) {
+        title = response.title;
+        requestUrl('status', onStatus);
+      }
   });
 };
 

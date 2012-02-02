@@ -37,6 +37,14 @@
   font-size: 16px;
 }
 
+#tunelinks {
+  font-size:12px;
+}
+
+#player_preview {
+  padding-below: 50px;
+}
+
 #SongTitleDiv {
   color:#333;
   line-height:20px;
