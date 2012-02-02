@@ -68,3 +68,19 @@
   width: 100%;
   height: 100%;
 }
+
+#footer {
+  color:#CCC;
+  font-size:13px;
+  height: 100%;
+}
+
+#footer a {
+  color:#CCC;
+  font-weight:bold;
+}
+
+#Copyright {
+  font-size: 9px;
+  padding-top: 3px;
+}
