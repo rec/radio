@@ -1,5 +1,4 @@
 var x = 0;
-var scrollInterval = 150;
 var OFF_THE_AIR = '               ...off the air...            ';
 var MISSING_TITLE = '                                                   ';
 var songTitle = MISSING_TITLE;
@@ -27,11 +26,11 @@ function songTitleScroller() {
 }
 
 function start() {
-  new Repeater('title', 3000, function(response) {
+  new Repeater('title', Common.Delay.titleRefresh, function(response) {
       if (response.title != songTitle)
         songTitle = response.title;
   });
-  new Repeater('listenerCount', 5000, function(response) {
+  new Repeater('listenerCount', Common.Delay.listenerRefresh, function(response) {
       var listeners = response.listeners || 0;
       document.getElementById('CurrListeners').innerHTML = listeners +
         (' listener' + ((listeners == 1) ? '' : 's') + ' online.');

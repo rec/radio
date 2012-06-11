@@ -12,20 +12,21 @@ function listenersArrived(listeners) {
 
 function bounceBroadcaster() {
   googleMap.setBroadcastMarkerAnimation(true);
-  setTimeout('unbounceBroadcaster()', 3500);
+  setTimeout('unbounceBroadcaster()', Common.Delay.unbounce);
 };
 
 
 function unbounceBroadcaster() {
   googleMap.setBroadcastMarkerAnimation(false);
-  setTimeout('bounceBroadcaster()', 60000);
+  setTimeout('bounceBroadcaster()', Common.Delay.bounce);
 };
 
 function startMaps() {
   googleMap = new GoogleMap();
-  new Repeater('listeners', 10000, listenersArrived);
+  new Repeater('listeners', Common.Delay.startMap, listenersArrived);
 
-  setTimeout(bounceBroadcaster, 1000);
+  if (Common.Enable.bounce)
+    setTimeout(bounceBroadcaster, Common.Delay.initialBounce);
 };
 
 jQuery(document).ready(startMaps);
