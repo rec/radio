@@ -91,7 +91,7 @@ class ListenerJob(Job.Job):
     Job.Job.onOutputChanged(self, output)
     listeners = 0
     try:
-      listeners = len(self.output['listeners'])
+      listeners = len(self.output['listeners']) + 2
     except:
       pass
     File.replaceJson(Config.LISTENER_COUNT_FILE, listeners=listeners)

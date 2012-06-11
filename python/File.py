@@ -14,8 +14,6 @@ def makeOpener():
   handler = urllib2.HTTPBasicAuthHandler(manager)
   return urllib2.build_opener(handler)
 
-OPENER = makeOpener()
-
 _index =  0
 
 def readUrl(url):
@@ -24,9 +22,11 @@ def readUrl(url):
     _index += 1
     sep = '&' if '?' in url else '?'
     url = '%s%s%d' % (url, sep, _index)
-    return OPENER.open(url).read()
+    return makeOpener().open(url).read()
   except:
-    print("Couldn't open URL" + url)
+    print "Couldn't open URL", url
+    traceback.print_exc(file=sys.stdout)
+    sys.stdout.flush()
     return None
 
 def replaceAtomic(filename, value):
@@ -39,6 +39,8 @@ def replaceAtomic(filename, value):
 
   except:
     print "Couldn't write to", tmpname, value
+    traceback.print_exc(file=sys.stdout)
+    sys.stdout.flush()
     return False
 
   try:
@@ -48,6 +50,8 @@ def replaceAtomic(filename, value):
 
   except:
     print "Couldn't rename", tmpname, "to", filename
+    traceback.print_exc(file=sys.stdout)
+    sys.stdout.flush()
     return False
 
 def replaceJson(filename, **args):
@@ -60,5 +64,7 @@ def readFile(f):
 
   except:
     print "Couldn't open file", f
+    traceback.print_exc(file=sys.stdout)
+    sys.stdout.flush()
     return None
 

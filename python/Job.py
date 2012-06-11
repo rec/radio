@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 
+import daemon
 import json
 import time
 
@@ -17,15 +18,25 @@ class Job(object):
 
   def run(self, time):
     if not (time % self.desc.interval):
-      output = self.process(File.readUrl(Config.ROOT_URL + self.desc.url))
-      if output != self.output:
-        Config.log(str(output) + '!' + str(self.output))
-        self.onOutputChanged(output)
+      self.doRun()
     return (-(time + 1) % self.desc.interval) + 1
+
+  def doRun(self):
+    output = self.process(File.readUrl(Config.ROOT_URL + self.desc.url))
+    if output != self.output:
+      Config.log(str(output) + '!' + str(self.output))
+      self.onOutputChanged(output)
+
+  def runAndWait(self):
+    self.doRun()
+    time.sleep(self.desc.interval)
 
   def onOutputChanged(self, output):
     File.replaceAtomic(self.dataFile(), json.dumps(output))
     self.output = output
+
+  def runAsDaemon(self):
+    pass
 
 
 def runJobs(*jobs):

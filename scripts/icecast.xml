@@ -4,7 +4,8 @@
      commented icecast.xml.dist file. -->
 <icecast>
     <limits>
-        <sources>2</sources>
+        <clients>100</clients>
+        <sources>100</sources>
         <client-timeout>30</client-timeout>
         <header-timeout>15</header-timeout>
         <source-timeout>10</source-timeout>

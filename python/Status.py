@@ -98,3 +98,4 @@ class StatusJob(Job.Job):
         traceback.print_exc(file=sys.stdout)
 
     Job.Job.onOutputChanged(self, output)
+

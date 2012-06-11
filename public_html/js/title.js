@@ -23,7 +23,7 @@ function songTitleScroller() {
   if (startPosition > scrollingRegion)
     startPosition = 0;
 
-  setTimeout("songTitleScroller()", (offTheAir ? 4 : 1) *scrollInterval);
+  setTimeout("songTitleScroller()", (offTheAir ? 4 : 1) * Common.Delay.titleScroll);
 }
 
 function start() {

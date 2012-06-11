@@ -3,7 +3,7 @@ function startTwitter() {
     version: 2,
     type: 'profile',
     rpp: 5,
-    interval: 10000,
+    interval: Common.Delay.twitter,
     width: "auto",
     theme: {
       shell: {

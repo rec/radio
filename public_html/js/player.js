@@ -1,7 +1,8 @@
 var x = 0;
 var scrollInterval = 150;
-var OFF_THE_AIR = '               ...off the air...            ';
+// var OFF_THE_AIR = '               ...off the air...            ';
 var MISSING_TITLE = '                                                   ';
+var OFF_THE_AIR = MISSING_TITLE;
 var songTitle = MISSING_TITLE;
 var startPosition = 0;
 var scrollingRegion = 300;

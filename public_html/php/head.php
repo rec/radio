@@ -26,6 +26,7 @@
   <script type="text/javascript"
 	        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAJbWgXo4oZxIhywn7tc-jftsPAEKHbchA&sensor=true"></script>
 
+  <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/ajax.js"></script>
   <script type="text/javascript" src="js/player.js"></script>
   <script type="text/javascript" src="js/swfplayer.js"></script>
