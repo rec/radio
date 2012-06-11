@@ -41,7 +41,7 @@ function onStatus(response) {
 
 function start() {
   var title = '';
-  new Repeater('title', Common.Delay.startRefresh, function(response) {
+  new Repeater('title', Common.Delay.titleRefresh, function(response) {
       if (response.title != title) {
         title = response.title;
         requestUrl('status', onStatus);

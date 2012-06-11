@@ -1,5 +1,4 @@
 var googleMap;
-var listenerFetchInterval = 10000;
 
 function listenersArrived(request) {
   try {
@@ -13,7 +12,8 @@ function listenersArrived(request) {
       googleMap.addListenerMarkers([]);
     }
   } catch(e) {}
-  setTimeout("requestListeners()", listenerFetchInterval);
+
+  setTimeout("requestListeners()", Common.Delay.listenerFetch);
 };
 
 function requestListeners() {
@@ -24,21 +24,9 @@ function requestListeners() {
                                  onComplete: listenersArrived});
 };
 
-function bounceBroadcaster() {
-  googleMap.setBroadcastMarkerAnimation(true);
-  setTimeout('unbounceBroadcaster()', 3500);
-};
-
-
-function unbounceBroadcaster() {  
-  googleMap.setBroadcastMarkerAnimation(false);
-  setTimeout('bounceBroadcaster()', 30000);
-};
-
 function startMaps() {
   googleMap = new GoogleMap('map_canvas');
   requestListeners();
-  setTimeout("bounceBroadcaster()", 1000);
 };
 
 jQuery(document).ready(startMaps);

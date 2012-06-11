@@ -1,17 +1,13 @@
 var Common = {
   Delay: {
-    twitter: 10000,
+    listenerFetch: 60000,
+    listenerRefresh: 60000,
+    titleRefresh: 10000,
     titleScroll: 150,
-    titleRefresh: 3000,
-    listenerRefresh: 5000,
-    startRefresh: 1000,
-    bounce: 60000,
-    unbounce: 3500,
-    startMap: 10000,
-    initialBounce: 1000
+    twitter: 60000,
   },
 
   Enable: {
-    bounce: false
+    bounceForever: false
   },
 };

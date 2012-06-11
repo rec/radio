@@ -1,5 +1,5 @@
 var x = 0;
-var scrollInterval = 150;
+
 // var OFF_THE_AIR = '               ...off the air...            ';
 var MISSING_TITLE = '                                                   ';
 var OFF_THE_AIR = MISSING_TITLE;
@@ -10,7 +10,6 @@ var songTitleDiv;
 var stationOnline;
 var innDiv;
 var offTheAir = true;
-var titleFetchInterval = 3000;
 
 var parts = [
     '<li class="lines"' +
@@ -58,7 +57,7 @@ function statusArrived(request) {
     data = request.responseText.evalJSON();
     // songTitle = data.title;
     offTheAir = !!data.error;
-    if (offTheAir) 
+    if (offTheAir)
       songTitle = OFF_THE_AIR;
     else if (!songTitle)
       songTitle = MISSING_TITLE;
@@ -83,7 +82,8 @@ function songTitleScroller() {
   if (startPosition > scrollingRegion)
     startPosition = 0;
 
-  setTimeout("songTitleScroller()", (offTheAir ? 4 : 1) *scrollInterval);
+  setTimeout("songTitleScroller()",
+             (offTheAir ? 4 : 1) * Common.Delay.titleScroll);
 }
 
 function requestStatus() {
@@ -102,7 +102,7 @@ function titleArrived(request) {
       requestStatus();
     }
   } catch (e) {}
-  setTimeout("requestTitle()", titleFetchInterval);
+  setTimeout("requestTitle()", Common.Delay.titleRefresh);
 };
 
 jQuery(document).ready(

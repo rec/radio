@@ -47,13 +47,13 @@ function GoogleMap(canvasName) {
       if (!newMarkers[i])
         removedIndexes[i] = markers[i];
         hasMarkers = true;
-	j++;
+        j++;
     }
     for (var i in newMarkers) {
       if (!markers[i]) {
         newIndexes[i] = newMarkers[i];
         hasMarkers = true;
-	k++;
+        k++;
       }
     }
 
