@@ -22,9 +22,9 @@ class Job(object):
     return (-(time + 1) % self.desc.interval) + 1
 
   def doRun(self):
-    output = self.process(File.readUrl(Config.ROOT_URL + self.desc.url))
+    url = Config.ROOT_URL + self.desc.url
+    output = self.process(File.readUrl(url))
     if output != self.output:
-      Config.log(str(output) + '!' + str(self.output))
       self.onOutputChanged(output)
 
   def runAndWait(self):

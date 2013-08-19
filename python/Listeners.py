@@ -23,7 +23,7 @@ def makeListener(ip, connected, client):
 
   geocode = Geocode.geocode(ip)
 
-  return dict(ip=ip, geocode=geocode, time=time, client=client, since=since)
+  return dict(ip=ip, geocode=geocode or '', time=time, client=client, since=since)
 
 def getFromHTML(data):
   if not data:

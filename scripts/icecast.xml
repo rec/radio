@@ -4,39 +4,55 @@
      commented icecast.xml.dist file. -->
 <icecast>
     <limits>
-        <clients>100</clients>
-        <sources>100</sources>
-        <client-timeout>30</client-timeout>
-        <header-timeout>15</header-timeout>
-        <source-timeout>10</source-timeout>
-        <!-- If enabled, this will provide a burst of data when a client
-	     first connects, thereby significantly reducing the startup
-	     time for listeners that do substantial buffering. However,
-	     it also significantly increases latency between the source
-	     client and listening client.  For low-latency setups, you
-	     might want to disable this. -->
-        <burst-on-connect>1</burst-on-connect>
-      </limits>
+      <clients>100</clients>
+      <sources>100</sources>
+      <client-timeout>30</client-timeout>
+      <header-timeout>15</header-timeout>
+      <source-timeout>10</source-timeout>
+      <!-- If enabled, this will provide a burst of data when a client
+	   first connects, thereby significantly reducing the startup
+	   time for listeners that do substantial buffering. However,
+	   it also significantly increases latency between the source
+	   client and listening client.  For low-latency setups, you
+	   might want to disable this. -->
+      <burst-on-connect>1</burst-on-connect>
+    </limits>
+
     <authentication>
-        <source-password>wombatwombat</source-password>
-        <relay-password>wombatwombat</relay-password>
-        <admin-user>admin</admin-user>
-        <admin-password>wombatwombat</admin-password>
+      <source-password>wombatwombat</source-password>
+      <relay-password>wombatwombat</relay-password>
+      <admin-user>admin</admin-user>
+      <admin-password>wombatwombat</admin-password>
     </authentication>
+
     <directory>
-        <yp-url-timeout>15</yp-url-timeout>
-        <yp-url>http://dir.xiph.org/cgi-bin/yp-cgi</yp-url>
+      <yp-url-timeout>15</yp-url-timeout>
+      <yp-url>http://dir.xiph.org/cgi-bin/yp-cgi</yp-url>
     </directory>
+
     <hostname>radio.swirly.com</hostname>
+
     <listen-socket>
         <port>8000</port>
+	<shoutcast-mount>/radio/</shoutcast-mount>
     </listen-socket>
-    <fileserve>1</fileserve>
+
     <mount>
       <mount-name>/radio</mount-name>
       <charset>UTF-8</charset>
     </mount>
     
+    <listen-socket>
+        <port>9000</port>
+	<shoutcast-mount>/radio2/</shoutcast-mount>
+    </listen-socket>
+
+    <mount>
+      <mount-name>/radio2</mount-name>
+      <charset>UTF-8</charset>
+    </mount>
+    
+    <fileserve>1</fileserve>
 
     <paths>
         <logdir>/home/radio/logs/icecast</logdir>
@@ -52,4 +68,5 @@
     </logging>
 
     <shoutcast-mount>/stream</shoutcast-mount>
+
 </icecast>

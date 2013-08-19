@@ -8,7 +8,7 @@ EZSTREAM_SCRIPT=$HOME/ezstream.xml
 EZSTREAM_RESULT=$HOME/ezstream_files.txt
 LOG_FILE=/home/radio/logs/ezstream/`date +%Y-%m-%d-%H-%M`.log
 
-find $FILE_PATH -name \*.mp3 \! -type l > /home/radio/radio/ezstream/ezstream_files.txt
+find $FILE_PATH -name \*.mp3 \! -type l > $EZSTREAM_SCRIPT
 $EZSTREAM -vvc $EZSTREAM_SCRIPT
 
 # )  2>&1 > $LOG_FILE
